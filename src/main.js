@@ -214,12 +214,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(cursorStyle);
 
     window.addEventListener('mousemove', (e) => {
-      cursorDot.style.left = \`\${e.clientX}px\`;
-      cursorDot.style.top = \`\${e.clientY}px\`;
+      cursorDot.style.left = `${e.clientX}px`;
+      cursorDot.style.top = `${e.clientY}px`;
       
       cursorOutline.animate({
-        left: \`\${e.clientX}px\`,
-        top: \`\${e.clientY}px\`
+        left: `${e.clientX}px`,
+        top: `${e.clientY}px`
       }, { duration: 500, fill: "forwards" });
     });
 
