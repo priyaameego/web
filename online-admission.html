@@ -20,7 +20,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased">
 
   <!-- Topbar & Navbar -->
-  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-white border-b border-gray-100">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
     <!-- Topbar -->
     <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
       <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -207,6 +207,154 @@
       </div>
     </div>
   </header>
+
+  
+    <section class="relative min-h-[800px] py-24 bg-gray-50">
+      <div class="absolute top-0 left-0 w-full h-[400px] bg-[#081C3A] z-0 rounded-b-[40px]"></div>
+      
+      <div class="container mx-auto px-6 relative z-10 text-center animate-fade-up">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm mb-6 shadow-premium">
+          🎓 Online Admission
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-12">Apply Online for Your Future</h1>
+        
+        <div class="max-w-4xl mx-auto bg-white rounded-[32px] shadow-2xl overflow-hidden text-left">
+          <!-- Progress -->
+          <div class="bg-gray-50 border-b border-gray-100 p-6 flex justify-between items-center relative">
+            <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 -z-10 mx-6 w-[calc(100%-48px)]"></div>
+            
+            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator active" data-step="1">
+              <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center shadow-md indicator-circle transition-all">1</div>
+              <span class="text-xs font-bold text-primary indicator-text transition-all">Personal Info</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator" data-step="2">
+              <div class="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-400 font-bold flex items-center justify-center indicator-circle transition-all">2</div>
+              <span class="text-xs font-bold text-gray-400 indicator-text transition-all">Course & Center</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator" data-step="3">
+              <div class="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-400 font-bold flex items-center justify-center indicator-circle transition-all">3</div>
+              <span class="text-xs font-bold text-gray-400 indicator-text transition-all">Submit</span>
+            </div>
+          </div>
+
+          <div class="p-8 md:p-12">
+            <form onsubmit="event.preventDefault(); showAdmissionSuccess();">
+              
+              <!-- STEP 1 -->
+              <div class="form-step active" id="step-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Personal Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Student Name *</label>
+                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Father's Name *</label>
+                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Date of Birth *</label>
+                    <input type="date" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Gender *</label>
+                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                      <option value="">Select Gender</option><option>Male</option><option>Female</option>
+                    </select>
+                  </div>
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Address *</label>
+                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                  <button type="button" onclick="nextStep(2)" class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-light">Next Step</button>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="form-step hidden" id="step-2">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Course & Center</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Select State *</label>
+                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                      <option value="">Choose State</option><option>Uttar Pradesh</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Select District *</label>
+                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                      <option value="">Choose District</option><option>Varanasi</option>
+                    </select>
+                  </div>
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Select Study Center *</label>
+                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                      <option value="">Choose Center</option><option>InstituteHub Main Campus</option>
+                    </select>
+                  </div>
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Select Course *</label>
+                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
+                      <option value="">Choose Course</option><option>ADCA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-between">
+                  <button type="button" onclick="nextStep(1)" class="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200">Back</button>
+                  <button type="button" onclick="nextStep(3)" class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-light">Next Step</button>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="form-step hidden" id="step-3">
+                <div class="text-center mb-8">
+                  <i class="ri-checkbox-circle-fill text-6xl text-primary mb-4 block"></i>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">Submit Application</h3>
+                  <p class="text-gray-500">Please review your details and click submit.</p>
+                </div>
+                <div class="mt-8 flex flex-col items-center">
+                  <button type="submit" class="px-10 py-4 bg-accent text-[#081C3A] font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:bg-yellow-500 w-full md:w-auto">Submit Admission Form</button>
+                  <button type="button" onclick="nextStep(2)" class="mt-4 text-gray-500 font-bold hover:text-gray-900">Back to Edit</button>
+                </div>
+                <div id="admissionSuccess" class="hidden text-center mt-6 p-4 bg-green-50 text-green-700 rounded-xl font-bold animate-fade-up">
+                  Admission form submitted successfully!
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function nextStep(stepNumber) {
+        document.querySelectorAll('.form-step').forEach(step => step.classList.add('hidden'));
+        document.getElementById('step-' + stepNumber).classList.remove('hidden');
+        document.getElementById('step-' + stepNumber).classList.add('animate-fade-up');
+        
+        document.querySelectorAll('.step-indicator').forEach(indicator => {
+          const stepVal = parseInt(indicator.getAttribute('data-step'));
+          const circle = indicator.querySelector('.indicator-circle');
+          const text = indicator.querySelector('.indicator-text');
+          
+          if (stepVal <= stepNumber) {
+            circle.className = 'w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center shadow-md indicator-circle transition-all';
+            text.className = 'text-xs font-bold text-primary indicator-text transition-all';
+          } else {
+            circle.className = 'w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-400 font-bold flex items-center justify-center indicator-circle transition-all';
+            text.className = 'text-xs font-bold text-gray-400 indicator-text transition-all';
+          }
+        });
+      }
+      
+      function showAdmissionSuccess() {
+        document.getElementById('admissionSuccess').classList.remove('hidden');
+      }
+    </script>
+
 
   <!-- Footer -->
   <footer class="bg-[#081C3A] text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm">

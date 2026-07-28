@@ -1,9 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 
-// Read layout to extract exactly the header and head
-const layout = fs.readFileSync('src/layout.html', 'utf8');
-const headerMatch = layout.match(/([\s\S]*?)<main/);
-const header = headerMatch ? headerMatch[1] : '';
+// Read layout properly using {{CONTENT}} placeholder pattern
+const layoutHtml = fs.readFileSync(path.join(__dirname, '../src/layout.html'), 'utf8');
 
 const contactContent = `
   <main id="page-content" class="min-h-screen">
@@ -583,9 +582,16 @@ const contactContent = `
     });
   </script>
   <script src="./src/main.js"></script>
-</body>
-</html>
 `;
 
-fs.writeFileSync('contact.html', header + contactContent);
+let finalHtml = layoutHtml.replace('{{CONTENT}}', contactContent);
+// Fix relative links
+finalHtml = finalHtml.replace(/href="([a-zA-Z0-9\-\/]+\.html)"/g, (match, p1) => {
+  if (p1.startsWith('http') || p1.startsWith('#') || p1.startsWith('./')) return match;
+  return `href="./${p1}"`;
+});
+finalHtml = finalHtml.replace(/src="\.\/(src\/main\.js)"/g, 'src="./src/main.js"');
+finalHtml = finalHtml.replace(/href="\.\/(dist\/output\.css)"/g, 'href="./dist/output.css"');
+
+fs.writeFileSync(path.join(__dirname, '..', 'contact.html'), finalHtml);
 console.log('contact.html successfully created!');

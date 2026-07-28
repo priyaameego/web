@@ -20,19 +20,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sticky Navbar
+  // ── Navbar Offset Fix ──────────────────────────────────────────────
+  // Dynamically measures actual navbar height and applies it as body
+  // padding-top so content always starts BELOW the fixed header.
+  // Uses ResizeObserver so it auto-adjusts on window resize / mobile.
   const header = document.getElementById('site-header');
   if (header) {
+    const applyOffset = () => {
+      document.body.style.paddingTop = header.offsetHeight + 'px';
+    };
+
+    // Set immediately on load
+    applyOffset();
+
+    // Re-apply on any resize (handles orientation change, topbar hide/show)
+    const ro = new ResizeObserver(() => requestAnimationFrame(applyOffset));
+    ro.observe(header);
+
+    // ── Sticky Navbar scroll style ──────────────────────────────────
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         header.classList.add('shadow-premium', 'glass');
-        header.classList.remove('bg-transparent', 'border-transparent');
       } else {
         header.classList.remove('shadow-premium', 'glass');
-        header.classList.add('bg-transparent', 'border-transparent');
       }
-    });
+    }, { passive: true });
   }
+
 
   // Intersection Observer for Scroll Animations
   const observerOptions = {

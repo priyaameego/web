@@ -20,7 +20,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased">
 
   <!-- Topbar & Navbar -->
-  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-white border-b border-gray-100">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
     <!-- Topbar -->
     <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
       <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -207,6 +207,114 @@
       </div>
     </div>
   </header>
+
+  
+    <!-- Clean Hero Section -->
+    <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?q=80&w=2070&auto=format&fit=crop" 
+             alt="Computer Institute" 
+             class="w-full h-full object-cover animate-ken-burns opacity-50">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#081C3A]/95 to-[#081C3A] z-10 mix-blend-multiply"></div>
+
+      <div class="container mx-auto px-6 relative z-20 text-center animate-fade-up">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm mb-6 shadow-premium">
+          📍 Authorized Centers
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-lg">
+          Find <span class="text-accent">Authorized Centers</span>
+        </h1>
+        
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+          Search and verify officially registered InstituteHub training centres across different cities and districts.
+        </p>
+
+        <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
+          <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <span class="text-accent">Find Centers</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="py-24 bg-gray-50 min-h-[600px]">
+      <div class="container mx-auto px-6 lg:px-12 max-w-5xl">
+        <div class="bg-white rounded-[24px] shadow-premium border border-gray-100 overflow-hidden animate-fade-up">
+          
+          <!-- Header -->
+          <div class="p-6 md:p-8 border-b border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 bg-white sticky top-0 z-10">
+            <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+              <i class="ri-building-4-line text-primary"></i> Find Centers
+            </h2>
+            <div class="relative w-full md:w-72">
+              <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <input type="text" placeholder="Search centres..." class="w-full bg-gray-50 border border-gray-200 rounded-full pl-10 pr-4 py-2 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors text-gray-700">
+            </div>
+          </div>
+
+          <!-- Responsive Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-gray-50 border-b border-gray-200 text-xs uppercase tracking-wider text-gray-500 font-bold">
+                  <th class="p-4 md:p-6 whitespace-nowrap">Centre Name</th>
+                  <th class="p-4 md:p-6 whitespace-nowrap">District</th>
+                  <th class="p-4 md:p-6 whitespace-nowrap">City</th>
+                  <th class="p-4 md:p-6 whitespace-nowrap">State</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm font-medium text-gray-700 divide-y divide-gray-100">
+                <tr class="hover:bg-blue-50/50 transition-colors cursor-default group">
+                  <td class="p-4 md:p-6 whitespace-nowrap text-gray-900 font-bold group-hover:text-primary transition-colors">ITEK INSTITUTE</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Azamgarh</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Beohara</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap"><span class="px-3 py-1 bg-gray-100 rounded-md text-xs font-bold text-gray-600">Uttar Pradesh</span></td>
+                </tr>
+                <tr class="bg-gray-50/30 hover:bg-blue-50/50 transition-colors cursor-default group">
+                  <td class="p-4 md:p-6 whitespace-nowrap text-gray-900 font-bold group-hover:text-primary transition-colors">TECH VISION ACADEMY</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Varanasi</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Lanka</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap"><span class="px-3 py-1 bg-gray-100 rounded-md text-xs font-bold text-gray-600">Uttar Pradesh</span></td>
+                </tr>
+                <tr class="hover:bg-blue-50/50 transition-colors cursor-default group">
+                  <td class="p-4 md:p-6 whitespace-nowrap text-gray-900 font-bold group-hover:text-primary transition-colors">EXCEL COMPUTER LAB</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Patna</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Kankarbagh</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap"><span class="px-3 py-1 bg-gray-100 rounded-md text-xs font-bold text-gray-600">Bihar</span></td>
+                </tr>
+                <tr class="bg-gray-50/30 hover:bg-blue-50/50 transition-colors cursor-default group">
+                  <td class="p-4 md:p-6 whitespace-nowrap text-gray-900 font-bold group-hover:text-primary transition-colors">DIGITAL HUB</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Lucknow</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Gomti Nagar</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap"><span class="px-3 py-1 bg-gray-100 rounded-md text-xs font-bold text-gray-600">Uttar Pradesh</span></td>
+                </tr>
+                <tr class="hover:bg-blue-50/50 transition-colors cursor-default group">
+                  <td class="p-4 md:p-6 whitespace-nowrap text-gray-900 font-bold group-hover:text-primary transition-colors">FUTURE IT POINT</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">Bhopal</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap">MP Nagar</td>
+                  <td class="p-4 md:p-6 whitespace-nowrap"><span class="px-3 py-1 bg-gray-100 rounded-md text-xs font-bold text-gray-600">Madhya Pradesh</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <!-- Pagination (Mock) -->
+          <div class="p-4 border-t border-gray-100 flex justify-between items-center bg-gray-50 text-xs font-medium text-gray-500">
+            <span>Showing 1 to 5 of 5 entries</span>
+            <div class="flex gap-1">
+              <button class="px-3 py-1 rounded bg-white border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-50" disabled>Prev</button>
+              <button class="px-3 py-1 rounded bg-primary text-white border border-primary transition-colors">1</button>
+              <button class="px-3 py-1 rounded bg-white border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-50" disabled>Next</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
   <!-- Footer -->
   <footer class="bg-[#081C3A] text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm">

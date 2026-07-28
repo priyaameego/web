@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+
 @theme {
   --color-primary: #081C3A;
   --color-primary-light: #2563EB;
@@ -18,6 +18,8 @@
   --animate-marquee: marquee 25s linear infinite;
   --animate-marquee2: marquee2 25s linear infinite;
   
+  --shadow-premium: 0 20px 40px rgba(7, 27, 58, 0.08), 0 1px 3px rgba(7, 27, 58, 0.05);
+
   @keyframes fadeUp {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }

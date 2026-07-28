@@ -20,7 +20,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased">
 
   <!-- Topbar & Navbar -->
-  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-white border-b border-gray-100">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
     <!-- Topbar -->
     <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
       <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -207,6 +207,104 @@
       </div>
     </div>
   </header>
+
+  
+    <section class="relative h-[550px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
+             alt="Campus" 
+             class="w-full h-full object-cover animate-ken-burns opacity-70">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#081C3A]/95 via-[#081C3A]/80 to-[#081C3A] z-10 mix-blend-multiply"></div>
+      <div class="absolute inset-0 z-10 opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]"></div>
+
+      <div class="container mx-auto px-6 relative z-20 text-center animate-fade-up mt-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm mb-6 shadow-premium">
+          About InstituteHub
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 drop-shadow-2xl">Student Testimonials</h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 font-light">Hear from our successful alumni and students about their InstituteHub experience.</p>
+      </div>
+    </section>
+  
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+      <div class="absolute -left-20 top-20 text-[300px] text-gray-200 opacity-50"><i class="ri-double-quotes-l"></i></div>
+      <div class="container mx-auto px-6 lg:px-12 relative z-10 max-w-5xl">
+        
+        <div class="relative bg-white rounded-[40px] shadow-2xl p-10 md:p-16 border border-gray-100">
+          <!-- Slider Container -->
+          <div class="overflow-hidden relative min-h-[300px]" id="testimonialSlider">
+            
+            <!-- Slide 1 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 testimonial-slide">
+              <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" class="w-32 h-32 rounded-full object-cover border-4 border-gray-50 shadow-lg shrink-0">
+                <div>
+                  <div class="flex text-accent mb-4 text-xl">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
+                  <p class="text-xl text-gray-600 italic leading-relaxed mb-6">"The ADCA course at InstituteHub completely changed my career trajectory. The practical labs and supportive faculty made learning complex concepts easy. I got a job immediately after completing the course!"</p>
+                  <h4 class="text-lg font-bold text-gray-900">Amit Kumar</h4>
+                  <p class="text-primary font-bold text-sm">ADCA Student</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 pointer-events-none testimonial-slide">
+              <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop" class="w-32 h-32 rounded-full object-cover border-4 border-gray-50 shadow-lg shrink-0">
+                <div>
+                  <div class="flex text-accent mb-4 text-xl">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                  </div>
+                  <p class="text-xl text-gray-600 italic leading-relaxed mb-6">"Excellent infrastructure and very helpful teachers. The Tally & GST training was completely hands-on, which gave me the confidence to handle real-world accounting tasks."</p>
+                  <h4 class="text-lg font-bold text-gray-900">Priya Singh</h4>
+                  <p class="text-primary font-bold text-sm">Tally & Accounts</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <div class="flex justify-center gap-4 mt-10">
+            <button onclick="changeSlide(-1)" class="w-12 h-12 rounded-full bg-gray-50 border border-gray-200 text-gray-600 hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm">
+              <i class="ri-arrow-left-line"></i>
+            </button>
+            <button onclick="changeSlide(1)" class="w-12 h-12 rounded-full bg-gray-50 border border-gray-200 text-gray-600 hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.testimonial-slide');
+      
+      function showSlide(index) {
+        slides.forEach(s => {
+          s.classList.remove('opacity-100');
+          s.classList.add('opacity-0', 'pointer-events-none');
+        });
+        slides[index].classList.remove('opacity-0', 'pointer-events-none');
+        slides[index].classList.add('opacity-100');
+      }
+
+      function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+      }
+
+      // Auto play
+      setInterval(() => changeSlide(1), 5000);
+    </script>
+
 
   <!-- Footer -->
   <footer class="bg-[#081C3A] text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm">

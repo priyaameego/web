@@ -20,7 +20,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased">
 
   <!-- Topbar & Navbar -->
-  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-white border-b border-gray-100">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
     <!-- Topbar -->
     <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
       <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -207,6 +207,52 @@
       </div>
     </div>
   </header>
+
+  
+    <section class="relative min-h-[700px] flex items-center justify-center py-24 bg-gradient-to-br from-[#081C3A] to-primary">
+      <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+      
+      <div class="container mx-auto px-6 relative z-10 flex justify-center">
+        <div class="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-[32px] shadow-2xl p-8 md:p-10 animate-fade-up text-white">
+          
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-bold mb-4">
+              🔐 Secure Portal
+            </div>
+            <h1 class="text-3xl font-bold mb-2">Student Login</h1>
+            <p class="text-gray-300 text-sm">Access your student dashboard.</p>
+          </div>
+
+          <form class="space-y-5">
+            <div>
+              <label class="block text-sm font-bold text-white/90 mb-2">Registration Number</label>
+              <input type="text" required placeholder="e.g. REG-00123" class="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:bg-white/10 focus:border-accent transition-all text-white placeholder-white/40">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-white/90 mb-2 flex justify-between">
+                <span>Password</span>
+                <a href="#" class="text-accent text-xs hover:underline">Forgot?</a>
+              </label>
+              <div class="relative">
+                <input type="password" required placeholder="••••••••" class="w-full bg-white/5 border border-white/20 rounded-xl pl-4 pr-10 py-3 focus:outline-none focus:bg-white/10 focus:border-accent transition-all text-white placeholder-white/40 tracking-wider">
+                <i class="ri-eye-off-line absolute right-4 top-1/2 -translate-y-1/2 text-white/50 cursor-pointer hover:text-white transition-colors"></i>
+              </div>
+            </div>
+            
+            <label class="flex items-center gap-2 cursor-pointer mt-4">
+              <input type="checkbox" class="rounded border-white/20 bg-white/5 text-accent focus:ring-accent focus:ring-offset-[#081C3A]">
+              <span class="text-sm text-gray-300">Remember Me</span>
+            </label>
+
+            <button type="button" class="w-full py-4 mt-2 bg-accent text-[#081C3A] font-bold rounded-xl hover:bg-yellow-500 hover:shadow-[0_0_20px_rgba(255,204,0,0.4)] transition-all duration-300">
+              Login to Dashboard
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
 
   <!-- Footer -->
   <footer class="bg-[#081C3A] text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm">
