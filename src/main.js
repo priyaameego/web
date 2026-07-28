@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Sticky Navbar scroll style ──────────────────────────────────
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        header.classList.add('shadow-premium', 'glass');
+        header.classList.add('shadow-premium', 'dark-glass');
       } else {
-        header.classList.remove('shadow-premium', 'glass');
+        header.classList.remove('shadow-premium', 'dark-glass');
       }
     }, { passive: true });
   }
