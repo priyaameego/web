@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InstituteHub | Premium Education</title>
-  <meta name="description" content="InstituteHub - Where education meets excellence. Ultra premium education institute offering top-tier courses, placement support, and expert faculty.">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="./dist/output.css">
-  
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased">
+import re
 
-  <!-- Topbar & Navbar -->
-  
+def premium_login():
+    with open('login.html', 'r', encoding='utf-8') as f:
+        content = f.read()
 
-  
-                <section class="relative min-h-screen flex flex-col lg:flex-row  bg-[#f8fafc]">
+    new_html = """        <section class="relative min-h-screen flex flex-col lg:flex-row pt-[72px] lg:pt-[104px] bg-[#f8fafc]">
       
       <!-- Left Side (Gradient & Welcome Text) -->
       <div class="w-full lg:w-5/12 bg-gradient-to-br from-[#22c55e] via-[#3b82f6] to-[#f97316] p-10 lg:p-16 flex flex-col justify-center relative overflow-hidden">
@@ -141,105 +122,15 @@
         }
       }
     </script>
-    </section>
+    </section>"""
 
+    # We replace from <section class="relative min-h-screen... up to the end of the section
+    pattern = r'<section class="relative min-h-screen.*?</section>'
+    
+    new_content = re.sub(pattern, new_html, content, flags=re.DOTALL)
+    
+    with open('login.html', 'w', encoding='utf-8') as f:
+        f.write(new_content)
 
-  <!-- Footer -->
-  <footer class="bg-[#081C3A] text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm">
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary-light to-blue-300"></div>
-    <div class="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-    <!-- Decorative Glow -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-light/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-    <div class="container mx-auto px-6 lg:px-12 relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
-        
-        <!-- Column 1 -->
-        <div>
-          <div class="mb-8 bg-white inline-block p-4 rounded-2xl shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
-            <img src="https://www.institutehub.in/storage/dashboard/branding/brand-strip/JasdHk2McXjAjd2NRBl1qeCzFAR4QWGHuJWiC7Dz.jpg" alt="Logo" class="h-14 w-auto object-contain">
-          </div>
-          <p class="leading-loose text-gray-400">An ISO 9001:2015 certified institute offering practical computer courses, hands-on lab training, and recognized certifications to build job-ready skills.</p>
-        </div>
-
-        <!-- Column 2 -->
-        <div>
-          <h3 class="text-white font-bold text-xl mb-8 relative inline-block">
-            Explore
-            <span class="absolute -bottom-3 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-          </h3>
-          <ul class="space-y-4">
-            <li><a href="./blog.html" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Blog</a></li>
-            <li><a href="./events.html" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Events</a></li>
-            <li><a href="./news.html" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> News</a></li>
-            <li><a href="./download.html" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Download</a></li>
-          </ul>
-        </div>
-        
-        <!-- Column 3 -->
-        <div>
-          <h3 class="text-white font-bold text-xl mb-8 relative inline-block">
-            Useful Links
-            <span class="absolute -bottom-3 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-          </h3>
-          <ul class="space-y-4">
-            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Terms & Conditions</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Refund Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-2"><i class="ri-arrow-right-s-line text-primary"></i> Cancellation Policy</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4 -->
-        <div>
-          <h3 class="text-white font-bold text-xl mb-8 relative inline-block">
-            Contact Us
-            <span class="absolute -bottom-3 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-          </h3>
-          <ul class="space-y-5 text-gray-400">
-            <li class="flex items-start gap-4 hover:translate-x-1 transition-transform duration-300">
-              <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 shadow-inner">
-                <i class="ri-map-pin-2-fill text-primary text-xl"></i>
-              </div>
-              <span class="mt-2">123 Education Street, Tech Hub, City, Country 123456</span>
-            </li>
-            <li class="flex items-center gap-4 hover:translate-x-1 transition-transform duration-300">
-              <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 shadow-inner">
-                <i class="ri-phone-fill text-primary text-xl"></i>
-              </div>
-              <a href="tel:+919876543210" class="hover:text-white transition-colors mt-1">+91 98765 43210</a>
-            </li>
-            <li class="flex items-center gap-4 hover:translate-x-1 transition-transform duration-300">
-              <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 shadow-inner">
-                <i class="ri-mail-send-fill text-primary text-xl"></i>
-              </div>
-              <a href="mailto:info@institutehub.in" class="hover:text-white transition-colors mt-1">info@institutehub.in</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-700/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-center md:text-left text-gray-500 font-medium tracking-wide">&copy; 2026 InstituteHub. All rights reserved.</p>
-        <div class="flex items-center gap-3">
-          <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-inner"><i class="ri-facebook-fill text-lg"></i></a>
-          <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-inner"><i class="ri-twitter-x-line text-lg"></i></a>
-          <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-inner"><i class="ri-instagram-line text-lg"></i></a>
-          <a href="#" class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-inner"><i class="ri-linkedin-fill text-lg"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Action Buttons -->
-  <a href="https://wa.me/919794412733" target="_blank" class="fixed bottom-6 left-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-green-600 transition-colors z-50">
-    <i class="ri-whatsapp-line"></i>
-  </a>
-  <a href="#" class="fixed bottom-6 right-6 w-12 h-12 bg-transparent border-2 border-primary text-primary rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-primary hover:text-white transition-all z-50 focus:outline-none">
-    <i class="ri-arrow-up-s-line"></i>
-  </a>
-
-  <script src="./src/main.js"></script>
-</body>
-</html>
+if __name__ == '__main__':
+    premium_login()

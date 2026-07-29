@@ -230,51 +230,104 @@
           </div>
         </div>
 
-        <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur-2xl border border-white rounded-[32px] shadow-2xl p-8 md:p-12 animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="max-w-3xl mx-auto bg-gray-100 rounded-[24px] shadow-2xl p-8 md:p-12 animate-fade-up" style="animation-delay: 0.2s;">
+          <!-- ENQUIRY FORM HEADER -->
+          
+
           <form onsubmit="event.preventDefault(); showSuccess(this);" class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="relative group">
-                <i class="ri-user-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
-                <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
+            <!-- Section 1 -->
+            <div>
+              <div class="flex items-center gap-4 mb-6 mt-2">
+                <span class="text-sm font-bold text-gray-400">1</span>
+                <h3 class="font-bold text-primary text-lg">Contact</h3>
               </div>
-              <div class="relative group">
-                <i class="ri-phone-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">Mobile Number <span class="text-red-500">*</span></label>
-                <input type="tel" required class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
-              </div>
-              <div class="relative group">
-                <i class="ri-mail-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
-                <input type="email" class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
-              </div>
-              <div class="relative group">
-                <i class="ri-book-read-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">Course of Interest <span class="text-red-500">*</span></label>
-                <select required class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm cursor-pointer text-gray-600">
-                  <option value="">Select Course</option>
-                  <option>ADCA</option>
-                  <option>DCA</option>
-                  <option>Web Development</option>
-                </select>
-              </div>
-              <div class="relative group md:col-span-2">
-                <i class="ri-map-pin-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">District <span class="text-red-500">*</span></label>
-                <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm">
-              </div>
-              <div class="relative group md:col-span-2">
-                <i class="ri-message-3-line absolute left-4 top-[38px] text-gray-400 group-focus-within:text-primary transition-colors"></i>
-                <label class="block text-sm font-bold text-gray-700 mb-2">Message</label>
-                <textarea rows="3" class="w-full bg-gray-50 border border-gray-200 rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm"></textarea>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <input type="text" placeholder="Student name *" required class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+                <div>
+                  <input type="tel" placeholder="Phone *" required class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+                <div>
+                  <input type="email" placeholder="Email *" required class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+                <div>
+                  <input type="tel" placeholder="WhatsApp *" required class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
               </div>
             </div>
-            
-            <button type="submit" class="w-full py-4 bg-primary text-white font-bold text-lg rounded-2xl hover:bg-primary-light transition-colors shadow-md flex items-center justify-center gap-2 group mt-4">
-              Send Enquiry <i class="ri-send-plane-fill group-hover:translate-x-1 transition-transform"></i>
-            </button>
-            
-            <div class="hidden success-message text-center p-4 bg-green-50 border border-green-200 rounded-2xl text-green-700 font-bold mt-4 animate-fade-up">
+
+            <!-- Section 2 -->
+            <div>
+              <div class="flex items-center gap-4 mb-6 mt-8">
+                <span class="text-sm font-bold text-gray-400">2</span>
+                <h3 class="font-bold text-primary text-lg">Location</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <input type="text" placeholder="PIN code *" required class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+                <div>
+                  <input type="text" placeholder="District" class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+                <div>
+                  <input type="text" placeholder="State" class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div>
+              <div class="flex items-center gap-4 mb-6 mt-8">
+                <span class="text-sm font-bold text-gray-400">3</span>
+                <h3 class="font-bold text-primary text-lg">Course & details</h3>
+              </div>
+              <div class="grid grid-cols-1 gap-4">
+                <div class="relative">
+                  <select class="w-full bg-white rounded-lg px-5 py-3.5 appearance-none" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-gray-500 border-none shadow-sm transition-all cursor-pointer">
+                    <option value="">Select qualification (optional)</option>
+                    <option>High School</option>
+                    <option>Intermediate</option>
+                    <option>Graduate</option>
+                    <option>Post Graduate</option>
+                  </select>
+                  <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
+                </div>
+                <div class="relative">
+                  <select required class="w-full bg-white rounded-lg px-5 py-3.5 appearance-none" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-gray-500 border-none shadow-sm transition-all cursor-pointer">
+                    <option value="">Select course *</option>
+                    <option>ADCA</option>
+                    <option>DCA</option>
+                    <option>Web Development</option>
+                    <option>Tally & Accounts</option>
+                  </select>
+                  <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
+                </div>
+                <div class="relative">
+                  <select class="w-full bg-white rounded-lg px-5 py-3.5 appearance-none" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-gray-500 border-none shadow-sm transition-all cursor-pointer">
+                    <option value="">Select batch / timing (optional)</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                  <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
+                </div>
+                <div>
+                  <input type="text" placeholder="How did you hear about us?" class="w-full bg-white rounded-lg px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm text-primary placeholder-gray-400 border-none shadow-sm transition-all">
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-8 mt-10 pt-2">
+              <button type="submit" class="text-primary font-bold text-base flex items-center gap-2 group hover:text-primary-light transition-colors">
+                Submit enquiry <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+              </button>
+              <a href="./online-admission.html" class="text-gray-500 font-medium text-sm flex items-center gap-2 group hover:text-gray-800 transition-colors">
+                Go to admission form <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+
+            <div class="hidden success-message text-center p-4 bg-green-50 border border-green-200 rounded-2xl text-green-700 font-bold mt-4 animate-fade-up w-full">
               <i class="ri-checkbox-circle-fill mr-1"></i> Enquiry Submitted Successfully! We will contact you soon.
             </div>
           </form>

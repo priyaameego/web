@@ -218,114 +218,186 @@
         </div>
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-12">Apply Online for Your Future</h1>
         
-        <div class="max-w-4xl mx-auto bg-white rounded-[32px] shadow-2xl overflow-hidden text-left">
-          <!-- Progress -->
-          <div class="bg-gray-50 border-b border-gray-100 p-6 flex justify-between items-center relative">
-            <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 -z-10 mx-6 w-[calc(100%-48px)]"></div>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden text-left">
+            <div class="text-center py-4 border-b border-gray-100">
+              <h2 class="text-[#111827] font-bold tracking-wider text-sm uppercase">ADMISSION FORM</h2>
+            </div>
             
-            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator active" data-step="1">
-              <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center shadow-md indicator-circle transition-all">1</div>
-              <span class="text-xs font-bold text-primary indicator-text transition-all">Personal Info</span>
-            </div>
-            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator" data-step="2">
-              <div class="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-400 font-bold flex items-center justify-center indicator-circle transition-all">2</div>
-              <span class="text-xs font-bold text-gray-400 indicator-text transition-all">Course & Center</span>
-            </div>
-            <div class="flex flex-col items-center gap-2 bg-gray-50 px-2 cursor-default step-indicator" data-step="3">
-              <div class="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-400 font-bold flex items-center justify-center indicator-circle transition-all">3</div>
-              <span class="text-xs font-bold text-gray-400 indicator-text transition-all">Submit</span>
-            </div>
-          </div>
-
-          <div class="p-8 md:p-12">
-            <form onsubmit="event.preventDefault(); showAdmissionSuccess();">
-              
-              <!-- STEP 1 -->
-              <div class="form-step active" id="step-1">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Personal Details</h3>
+            <form onsubmit="event.preventDefault();" class="p-6 md:p-8 space-y-8">
+              <!-- 1 Course And Batch -->
+              <div>
+                <div class="flex items-center gap-3 mb-6 bg-[#f4f6fc] p-3 rounded-lg text-primary">
+                  <div class="w-6 h-6 rounded-full bg-[#4F46E5] text-white flex items-center justify-center text-xs font-bold shrink-0">1</div>
+                  <h3 class="font-bold text-[#111827] text-lg">Course And Batch</h3>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Student Name *</label>
-                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                  <!-- Session -->
+                  <div class="relative mt-1">
+                    <label class="absolute -top-2.5 left-3 bg-white px-1 text-xs font-medium text-[#4F46E5]">Session *</label>
+                    <input type="text" value="2026-27" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
                   </div>
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Father's Name *</label>
-                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
-                  </div>
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Date of Birth *</label>
-                    <input type="date" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                  </div>
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Gender *</label>
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                      <option value="">Select Gender</option><option>Male</option><option>Female</option>
+                  <!-- Select batch -->
+                  <div class="relative mt-1">
+                    <select class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">Select batch</option>
+                      <option>Morning</option>
+                      <option>Evening</option>
                     </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
                   </div>
-                  <div class="md:col-span-2">
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Address *</label>
-                    <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                  <!-- Select course -->
+                  <div class="relative">
+                    <select class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">Select course</option>
+                      <option>ADCA</option>
+                      <option>DCA</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
                   </div>
-                </div>
-                <div class="mt-8 flex justify-end">
-                  <button type="button" onclick="nextStep(2)" class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-light">Next Step</button>
+                  <!-- Admission date -->
+                  <div class="relative">
+                    <label class="absolute -top-2.5 left-3 bg-white px-1 text-xs font-medium text-[#4F46E5]">Admission date *</label>
+                    <input type="text" value="29/07/2026" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  </div>
                 </div>
               </div>
 
-              <!-- STEP 2 -->
-              <div class="form-step hidden" id="step-2">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Course & Center</h3>
+              <!-- 2 Student -->
+              <div>
+                <div class="flex items-center gap-3 mb-6 bg-[#f4f6fc] p-3 rounded-lg text-primary">
+                  <div class="w-6 h-6 rounded-full bg-[#4F46E5] text-white flex items-center justify-center text-xs font-bold shrink-0">2</div>
+                  <h3 class="font-bold text-[#111827] text-lg">Student</h3>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Select State *</label>
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                      <option value="">Choose State</option><option>Uttar Pradesh</option>
+                  <input type="text" placeholder="Full name *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="text" placeholder="Date of birth *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  
+                  <div class="relative">
+                    <select required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">Select gender *</option>
+                      <option>Male</option>
+                      <option>Female</option>
                     </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
                   </div>
-                  <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Select District *</label>
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                      <option value="">Choose District</option><option>Varanasi</option>
+                  <input type="text" placeholder="Father's name *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="text" placeholder="Mother's name *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  
+                  <div class="relative">
+                    <select class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">Blood group (optional)</option>
+                      <option>A+</option>
+                      <option>O+</option>
                     </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
                   </div>
-                  <div class="md:col-span-2">
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Select Study Center *</label>
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                      <option value="">Choose Center</option><option>InstituteHub Main Campus</option>
+                  <div class="relative">
+                    <select class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">Qualification (optional)</option>
+                      <option>10th</option>
+                      <option>12th</option>
                     </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
                   </div>
-                  <div class="md:col-span-2">
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Select Course *</label>
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary outline-none text-gray-600">
-                      <option value="">Choose Course</option><option>ADCA</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="mt-8 flex justify-between">
-                  <button type="button" onclick="nextStep(1)" class="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200">Back</button>
-                  <button type="button" onclick="nextStep(3)" class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-light">Next Step</button>
+                  <input type="text" placeholder="Referral code (optional)" class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
                 </div>
               </div>
 
-              <!-- STEP 3 -->
-              <div class="form-step hidden" id="step-3">
-                <div class="text-center mb-8">
-                  <i class="ri-checkbox-circle-fill text-6xl text-primary mb-4 block"></i>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-2">Submit Application</h3>
-                  <p class="text-gray-500">Please review your details and click submit.</p>
+              <!-- 3 Contact -->
+              <div>
+                <div class="flex items-center gap-3 mb-6 bg-[#f4f6fc] p-3 rounded-lg text-primary">
+                  <div class="w-6 h-6 rounded-full bg-[#4F46E5] text-white flex items-center justify-center text-xs font-bold shrink-0">3</div>
+                  <h3 class="font-bold text-[#111827] text-lg">Contact</h3>
                 </div>
-                <div class="mt-8 flex flex-col items-center">
-                  <button type="submit" class="px-10 py-4 bg-accent text-[#081C3A] font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:bg-yellow-500 w-full md:w-auto">Submit Admission Form</button>
-                  <button type="button" onclick="nextStep(2)" class="mt-4 text-gray-500 font-bold hover:text-gray-900">Back to Edit</button>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <input type="tel" placeholder="Phone *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="tel" placeholder="Alternate mobile" class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="email" placeholder="Email *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="text" placeholder="Address *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
                 </div>
-                <div id="admissionSuccess" class="hidden text-center mt-6 p-4 bg-green-50 text-green-700 rounded-xl font-bold animate-fade-up">
-                  Admission form submitted successfully!
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                  <input type="text" placeholder="PIN code *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="text" placeholder="District" class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <input type="text" placeholder="State" class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
                 </div>
               </div>
 
+              <!-- 4 Identity And Documents -->
+              <div>
+                <div class="flex items-center gap-3 mb-6 bg-[#f4f6fc] p-3 rounded-lg text-primary">
+                  <div class="w-6 h-6 rounded-full bg-[#4F46E5] text-white flex items-center justify-center text-xs font-bold shrink-0">4</div>
+                  <h3 class="font-bold text-[#111827] text-lg">Identity And Documents</h3>
+                </div>
+                <div class="space-y-6">
+                  <input type="text" placeholder="Aadhaar number *" required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-900 transition-colors">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Student photo -->
+                    <label class="flex items-center justify-between w-full bg-white border border-gray-300 border-dashed rounded-md px-4 py-2 cursor-pointer hover:bg-gray-50 transition-colors group">
+                      <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i class="ri-cloud-upload-line text-[#4F46E5]"></i> <span class="file-name">Student photo *</span>
+                      </div>
+                      <span class="px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-xs font-bold text-[#111827] group-hover:bg-gray-200 transition-colors">Browse</span>
+                      <input type="file" accept="image/*" class="hidden" onchange="this.parentElement.querySelector('.file-name').textContent = this.files[0] ? this.files[0].name : 'Student photo *'">
+                    </label>
+                    <!-- Aadhaar card -->
+                    <label class="flex items-center justify-between w-full bg-white border border-gray-300 border-dashed rounded-md px-4 py-2 cursor-pointer hover:bg-gray-50 transition-colors group">
+                      <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i class="ri-cloud-upload-line text-[#4F46E5]"></i> <span class="file-name">Aadhaar card *</span>
+                      </div>
+                      <span class="px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-xs font-bold text-[#111827] group-hover:bg-gray-200 transition-colors">Browse</span>
+                      <input type="file" accept=".pdf,image/*" class="hidden" onchange="this.parentElement.querySelector('.file-name').textContent = this.files[0] ? this.files[0].name : 'Aadhaar card *'">
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 Additional information -->
+              <div>
+                <div class="flex items-center gap-3 mb-6 bg-[#f4f6fc] p-3 rounded-lg text-primary">
+                  <div class="w-6 h-6 rounded-full bg-[#4F46E5] text-white flex items-center justify-center text-xs font-bold shrink-0">5</div>
+                  <h3 class="font-bold text-[#111827] text-lg">Additional information</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- 10th marksheet -->
+                  <label class="flex items-center justify-between w-full bg-white border border-gray-300 border-dashed rounded-md px-4 py-2 cursor-pointer hover:bg-gray-50 transition-colors group">
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                      <i class="ri-cloud-upload-line text-[#4F46E5]"></i> <span class="file-name">10 th marksheet *</span>
+                    </div>
+                    <span class="px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-xs font-bold text-[#111827] group-hover:bg-gray-200 transition-colors">Browse</span>
+                    <input type="file" accept=".pdf,image/*" class="hidden" onchange="this.parentElement.querySelector('.file-name').textContent = this.files[0] ? this.files[0].name : '10 th marksheet *'">
+                  </label>
+                  <!-- Exam mode -->
+                  <div class="relative">
+                    <select required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">EXAM MODE *</option>
+                      <option>Online</option>
+                      <option>Offline</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
+                  </div>
+                  
+                  <!-- Declaration -->
+                  <div class="relative">
+                    <select required class="w-full bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#4F46E5] text-sm text-gray-500 transition-colors cursor-pointer appearance-none" style="appearance: none; -webkit-appearance: none;">
+                      <option value="">I, -------------------------- (Student), declare</option>
+                      <option>I agree to the terms</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute text-gray-400 pointer-events-none" style="right: 1rem; top: 50%; transform: translateY(-50%);"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex flex-wrap items-center gap-4 mt-8 pt-4">
+                <button type="submit" class="px-7 py-3 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-medium text-sm rounded-full transition-colors flex items-center gap-2 group">
+                  Submit admission <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <a href="./online-enquiry.html" class="px-7 py-3 bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#111827] font-medium text-sm rounded-full transition-colors flex items-center gap-2 group">
+                  Enquiry only <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </form>
           </div>
-        </div>
       </div>
     </section>
 
