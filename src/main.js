@@ -38,11 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ro.observe(header);
 
     // ── Sticky Navbar scroll style ──────────────────────────────────
+    const topAlert = document.getElementById('top-alert');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         header.classList.add('shadow-premium', 'dark-glass');
+        if (topAlert) topAlert.classList.add('hidden');
       } else {
         header.classList.remove('shadow-premium', 'dark-glass');
+        if (topAlert) topAlert.classList.remove('hidden');
       }
     }, { passive: true });
   }

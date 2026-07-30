@@ -42,7 +42,28 @@ module.exports = {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.12)' },
         },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-5px)' },
+          '75%': { transform: 'translateX(5px)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+          '50%': { opacity: '0.6', transform: 'scale(1.05)' },
+        }
       },
+      animation: {
+        'fade-up': 'fadeUp 0.8s ease-out forwards',
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        'zoom-in': 'zoomIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'ken-burns': 'kenBurns 20s ease-out forwards',
+        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+      }
     },
   },
   plugins: [],

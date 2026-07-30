@@ -5,7 +5,7 @@ const layoutHtml = fs.readFileSync(path.join(__dirname, '../src/layout.html'), '
 
 const franchiseRegContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[650px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
              alt="Business Meeting" 
@@ -24,19 +24,11 @@ const franchiseRegContent = `
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-2xl">
           Start Your Own Institute With <span class="text-accent">InstituteHub</span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 font-light leading-relaxed">
-          Join our growing education network and build a successful computer training centre with complete academic support, branding, certification, marketing assistance, and operational guidance.
-        </p>
 
-        <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400 mb-12">
+        <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="../index.html" class="hover:text-white transition-colors">Home</a>
           <span>/</span>
           <span class="text-accent">Franchise Registration</span>
-        </div>
-        
-        <div class="animate-bounce inline-block text-white/50">
-          <i class="ri-arrow-down-line text-2xl"></i>
         </div>
       </div>
     </section>

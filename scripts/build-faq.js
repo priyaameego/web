@@ -4,7 +4,7 @@ const layout = fs.readFileSync('src/layout.html', 'utf8');
 
 const faqContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[550px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <!-- Background Image with Ken Burns -->
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" 
@@ -26,10 +26,6 @@ const faqContent = `
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-2xl">
           Frequently Asked Questions
         </h1>
-        
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-          Find answers to the most common questions about admissions, courses, certificates, online exams, student services, and franchise opportunities.
-        </p>
 
         <!-- Breadcrumb -->
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
@@ -180,43 +176,6 @@ const faqContent = `
         </div>
       </div>
     </section>
-
-    <!-- Still Have Questions CTA -->
-    <section class="py-24 relative overflow-hidden">
-      <!-- Animated Gradient Background -->
-      <div class="absolute inset-0 bg-gradient-to-br from-[#081C3A] via-primary to-primary-light z-0"></div>
-      
-      <!-- Glowing Orbs -->
-      <div class="absolute -top-20 left-10 w-96 h-96 bg-accent/20 rounded-full blur-[100px] animate-float"></div>
-      <div class="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-[100px] animate-float" style="animation-delay: 2s;"></div>
-      
-      <div class="container mx-auto px-6 lg:px-12 relative z-10">
-        <div class="bg-white/10 backdrop-blur-2xl rounded-[32px] p-10 lg:p-16 border border-white/20 shadow-2xl text-center animate-fade-up max-w-5xl mx-auto">
-          
-          <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-8 animate-bounce" style="animation-duration: 3s;">
-            <i class="ri-question-answer-fill text-4xl text-white"></i>
-          </div>
-
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Still have a question?</h2>
-          <p class="text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            If you couldn't find the answer you're looking for, our support team is always ready to help. Contact us for admissions, courses, certificate verification, franchise inquiries, or general assistance.
-          </p>
-          
-          <div class="flex flex-wrap justify-center gap-5">
-            <a href="contact.html" class="px-8 py-4 bg-white text-primary rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 magnetic-btn border border-transparent hover:border-white">
-              Contact Us
-            </a>
-            <a href="tel:9794412732" class="px-8 py-4 bg-transparent border-2 border-white/50 text-white rounded-full font-bold hover:bg-white/10 hover:border-white hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
-              <i class="ri-phone-fill text-xl"></i> Call Now
-            </a>
-            <a href="https://wa.me/919794412733" target="_blank" class="px-8 py-4 bg-green-500 text-white rounded-full font-bold shadow-lg hover:bg-green-400 hover:shadow-green-500/30 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
-              <i class="ri-whatsapp-fill text-xl"></i> WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Custom FAQ JS -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {

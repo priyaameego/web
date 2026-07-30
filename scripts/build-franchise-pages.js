@@ -5,7 +5,7 @@ const layoutHtml = fs.readFileSync(path.join(__dirname, '../src/layout.html'), '
 
 const verificationContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[450px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
              alt="Campus Office" 
@@ -24,10 +24,6 @@ const verificationContent = `
         <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-2xl">
           Verify an Authorized <span class="text-accent">Franchise Centre</span>
         </h1>
-        
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-          Enter your Franchise ID to verify whether a franchise centre is officially registered with InstituteHub.
-        </p>
 
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="../index.html" class="hover:text-white transition-colors">Home</a>
@@ -172,7 +168,7 @@ const verificationContent = `
 
 const centersContent = `
     <!-- Clean Hero Section -->
-    <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?q=80&w=2070&auto=format&fit=crop" 
              alt="Computer Institute" 
@@ -188,10 +184,6 @@ const centersContent = `
         <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-lg">
           Find <span class="text-accent">Authorized Centers</span>
         </h1>
-        
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-          Search and verify officially registered InstituteHub training centres across different cities and districts.
-        </p>
 
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="../index.html" class="hover:text-white transition-colors">Home</a>

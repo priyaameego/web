@@ -25,7 +25,7 @@ const posts = [
 
 const blogContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop" 
              alt="Digital Classroom" 
@@ -35,7 +35,7 @@ const blogContent = `
       
       <!-- Floating Particles & Light rays -->
       <div class="absolute inset-0 z-10 opacity-40 pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]"></div>
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-primary/20 to-transparent blur-[100px] z-10"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-gradient-to-b from-primary/20 to-transparent blur-[100px] z-10"></div>
 
       <div class="container mx-auto px-6 relative z-20 text-center animate-fade-up">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm mb-6 shadow-premium">
@@ -45,10 +45,6 @@ const blogContent = `
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-2xl">
           Insights, Learning &<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accent">Student Success</span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-          Explore institute updates, computer education tips, digital skills, career guidance, exam resources, and student success stories to stay ahead in your learning journey.
-        </p>
 
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="index.html" class="hover:text-white transition-colors">Home</a>
@@ -66,23 +62,29 @@ const blogContent = `
             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
               <i class="ri-search-line"></i>
             </div>
-            <input type="text" placeholder="Search Articles..." class="w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+            <input type="text" id="searchInput" placeholder="Search Articles..." class="w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
           </div>
           <div class="flex gap-3 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
-            <select class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
-              <option>All Categories</option>
-              <option>Institute Updates</option>
-              <option>Career Guidance</option>
-              <option>Web Development</option>
+            <select id="categorySelect" class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
+              <option value="all">All Categories</option>
+              <option value="Institute Updates">Institute Updates</option>
+              <option value="Career Guidance">Career Guidance</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Placement Success">Placement Success</option>
+              <option value="Technology">Technology</option>
+              <option value="Student Success">Student Success</option>
+              <option value="Cyber Security">Cyber Security</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Programming">Programming</option>
             </select>
-            <select class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
-              <option>Latest First</option>
-              <option>Oldest First</option>
+            <select id="sortSelect" class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
+              <option value="latest">Latest First</option>
+              <option value="oldest">Oldest First</option>
             </select>
-            <select class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
-              <option>Any Read Time</option>
-              <option>< 5 mins</option>
-              <option>> 5 mins</option>
+            <select id="readTimeSelect" class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-full px-4 py-2.5 focus:outline-none focus:border-primary cursor-pointer">
+              <option value="all">Any Read Time</option>
+              <option value="short">&lt; 5 mins</option>
+              <option value="long">&gt;= 5 mins</option>
             </select>
           </div>
         </div>
@@ -126,10 +128,10 @@ const blogContent = `
         <div class="flex flex-col lg:flex-row gap-10">
           <!-- Blog Grid (75%) -->
           <div class="lg:w-3/4">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               ${posts.slice(0, 15).map((post, i) => {
                 if(post.title === posts[7].title) return ''; // Skip featured
-                return '<article class="bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500 border border-gray-100 group flex flex-col h-full animate-fade-up" style="animation-delay: ' + ((i%3)*0.1) + 's;">' +
+                return '<article data-category="' + post.category + '" data-readtime="' + post.readTime + '" data-title="' + post.title.toLowerCase() + '" data-excerpt="' + post.excerpt.toLowerCase() + '" class="blog-post-card bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500 border border-gray-100 group flex flex-col h-full animate-fade-up" style="animation-delay: ' + ((i%3)*0.1) + 's;">' +
                   '<div class="relative h-56 overflow-hidden">' +
                     '<img src="' + post.img + '" alt="' + post.title + '" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">' +
                     '<div class="absolute top-4 left-4">' +
@@ -141,7 +143,7 @@ const blogContent = `
                     '<p class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed">' + post.excerpt + '</p>' +
                     
                     '<div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">' +
-                      '<div class="flex items-center gap-2">' +
+                       '<div class="flex items-center gap-2">' +
                         '<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">WI</div>' +
                         '<div class="flex flex-col">' +
                           '<span class="text-xs font-bold text-gray-900">' + post.date + '</span>' +
@@ -177,11 +179,11 @@ const blogContent = `
               <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                 <h4 class="font-bold text-lg text-gray-900 mb-6 flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent"></div> Categories</h4>
                 <ul class="space-y-3">
-                  <li><a href="#" class="flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Institute Updates</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">5</span></a></li>
-                  <li><a href="#" class="flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Career Guidance</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">3</span></a></li>
-                  <li><a href="#" class="flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Student Zone</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">4</span></a></li>
-                  <li><a href="#" class="flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Web Development</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">2</span></a></li>
-                  <li><a href="#" class="flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Cyber Security</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">1</span></a></li>
+                  <li><a href="javascript:void(0);" data-category="Institute Updates" class="category-filter-btn flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Institute Updates</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">5</span></a></li>
+                  <li><a href="javascript:void(0);" data-category="Career Guidance" class="category-filter-btn flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Career Guidance</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">3</span></a></li>
+                  <li><a href="javascript:void(0);" data-category="Student Success" class="category-filter-btn flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Student Success</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">4</span></a></li>
+                  <li><a href="javascript:void(0);" data-category="Web Development" class="category-filter-btn flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Web Development</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">2</span></a></li>
+                  <li><a href="javascript:void(0);" data-category="Cyber Security" class="category-filter-btn flex justify-between items-center text-sm text-gray-600 hover:text-primary transition-colors group"><span class="group-hover:translate-x-1 transition-transform">Cyber Security</span> <span class="px-2 py-0.5 bg-gray-50 rounded-md text-xs font-medium">1</span></a></li>
                 </ul>
               </div>
 
@@ -189,12 +191,12 @@ const blogContent = `
               <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                 <h4 class="font-bold text-lg text-gray-900 mb-6 flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent"></div> Popular Tags</h4>
                 <div class="flex flex-wrap gap-2">
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Exams</a>
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Placements</a>
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Admissions</a>
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Software</a>
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">AI</a>
-                  <a href="#" class="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Franchise</a>
+                  <a href="javascript:void(0);" data-tag="exam" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Exams</a>
+                  <a href="javascript:void(0);" data-tag="placement" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Placements</a>
+                  <a href="javascript:void(0);" data-tag="admission" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Admissions</a>
+                  <a href="javascript:void(0);" data-tag="software" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Software</a>
+                  <a href="javascript:void(0);" data-tag="ai" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">AI</a>
+                  <a href="javascript:void(0);" data-tag="franchise" class="tag-filter-btn px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-lg text-xs text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">Franchise</a>
                 </div>
               </div>
               
@@ -235,7 +237,7 @@ const blogContent = `
           </p>
           
           <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-            <input type="email" placeholder="Enter Your Email Address" required class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:border-white focus:bg-white/20 transition-all text-sm font-medium">
+            <input type="email" placeholder="Enter Your Email Address" required class="w-full md:flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:border-white focus:bg-white/20 transition-all text-sm font-medium">
             <button type="submit" class="px-8 py-4 rounded-full bg-accent text-white font-bold hover:bg-yellow-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 magnetic-btn">
               Subscribe
             </button>
@@ -256,6 +258,93 @@ const blogContent = `
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('searchInput');
+        const categorySelect = document.getElementById('categorySelect');
+        const sortSelect = document.getElementById('sortSelect');
+        const readTimeSelect = document.getElementById('readTimeSelect');
+        const blogGrid = document.getElementById('blogGrid');
+        const posts = Array.from(document.querySelectorAll('.blog-post-card'));
+        const categoryFilterBtns = document.querySelectorAll('.category-filter-btn');
+        const tagFilterBtns = document.querySelectorAll('.tag-filter-btn');
+
+        let activeCategory = 'all';
+        let activeTag = '';
+
+        function filterPosts() {
+          const query = searchInput.value.toLowerCase().trim();
+          const category = activeCategory;
+          const readTime = readTimeSelect.value;
+          const tag = activeTag.toLowerCase();
+
+          posts.forEach(post => {
+            const title = post.getAttribute('data-title');
+            const excerpt = post.getAttribute('data-excerpt');
+            const postCategory = post.getAttribute('data-category');
+            const postReadtimeStr = post.getAttribute('data-readtime');
+            const readTimeMinutes = parseInt(postReadtimeStr) || 0;
+
+            const matchesSearch = !query || title.includes(query) || excerpt.includes(query);
+            const matchesCategory = category === 'all' || postCategory === category;
+            const matchesTag = !tag || title.includes(tag) || excerpt.includes(tag) || postCategory.toLowerCase().includes(tag);
+            
+            let matchesReadTime = true;
+            if (readTime === 'short') {
+              matchesReadTime = readTimeMinutes < 5;
+            } else if (readTime === 'long') {
+              matchesReadTime = readTimeMinutes >= 5;
+            }
+
+            if (matchesSearch && matchesCategory && matchesTag && matchesReadTime) {
+              post.style.display = '';
+            } else {
+              post.style.display = 'none';
+            }
+          });
+        }
+
+        searchInput.addEventListener('input', () => {
+          activeTag = '';
+          tagFilterBtns.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+          filterPosts();
+        });
+
+        categorySelect.addEventListener('change', () => {
+          activeCategory = categorySelect.value;
+          filterPosts();
+        });
+
+        readTimeSelect.addEventListener('change', filterPosts);
+
+        categoryFilterBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cat = btn.getAttribute('data-category');
+            activeCategory = cat;
+            categorySelect.value = cat;
+            filterPosts();
+          });
+        });
+
+        tagFilterBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tag = btn.getAttribute('data-tag');
+            if (activeTag === tag) {
+              activeTag = '';
+              btn.classList.remove('bg-primary', 'text-white');
+            } else {
+              tagFilterBtns.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+              activeTag = tag;
+              btn.classList.add('bg-primary', 'text-white');
+            }
+            filterPosts();
+          });
+        });
+      });
+    </script>
 `;
 
 let finalHtml = layout.replace('{{CONTENT}}', blogContent);

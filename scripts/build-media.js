@@ -8,7 +8,7 @@ const pages = {};
 // 1. News Page
 // ==========================================
 pages['news.html'] = `
-    <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover animate-ken-burns">
       </div>
@@ -20,7 +20,6 @@ pages['news.html'] = `
           <i class="ri-newspaper-fill text-accent"></i> News & Announcements
         </div>
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">Latest News & <span class="text-accent">Announcements</span></h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">Stay updated with the latest institute announcements, admissions, workshops, seminars, examinations, placements, achievements, and campus activities.</p>
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="index.html" class="hover:text-white transition-colors">Home</a> <span>/</span> <span class="text-accent">News</span>
         </div>
@@ -79,7 +78,7 @@ pages['news.html'] = `
 // 2. Photo Gallery Page
 // ==========================================
 pages['photo-gallery.html'] = `
-    <section class="relative h-[550px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0 grid grid-cols-3 gap-1 opacity-40">
         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
         <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
@@ -91,12 +90,11 @@ pages['photo-gallery.html'] = `
           <i class="ri-camera-lens-fill text-accent"></i> Photography
         </div>
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">Campus Photo <span class="text-accent">Gallery</span></h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light">Explore our campus life, classrooms, laboratories, workshops, seminars, cultural events, placements, and student activities.</p>
         <div class="flex gap-2 justify-center flex-wrap">
-          <button class="px-4 py-2 bg-primary text-white rounded-full text-sm font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">All Photos</button>
-          <button class="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all">Campus</button>
-          <button class="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all">Events</button>
-          <button class="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all">Placements</button>
+          <button class="filter-btn px-4 py-2 bg-primary text-white rounded-full text-sm font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all cursor-pointer" data-filter="all">All Photos</button>
+          <button class="filter-btn px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all cursor-pointer" data-filter="Campus">Campus</button>
+          <button class="filter-btn px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all cursor-pointer" data-filter="Events">Events</button>
+          <button class="filter-btn px-4 py-2 bg-white/10 text-white rounded-full text-sm font-bold hover:bg-white/20 transition-all cursor-pointer" data-filter="Placements">Placements</button>
         </div>
       </div>
     </section>
@@ -106,19 +104,19 @@ pages['photo-gallery.html'] = `
         <!-- Masonry Grid -->
         <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
           ${[
-            "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80",
-            "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80",
-            "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80",
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80",
-            "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80",
-            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80",
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80",
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80"
+            {url: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80", category: "Campus"},
+            {url: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80", category: "Events"},
+            {url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80", category: "Placements"},
+            {url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80", category: "Campus"},
+            {url: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80", category: "Events"},
+            {url: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80", category: "Campus"},
+            {url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80", category: "Placements"},
+            {url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80", category: "Events"}
           ].map(img => 
-            '<div class="break-inside-avoid rounded-2xl overflow-hidden group relative cursor-pointer shadow-lg animate-fade-up">' +
-              '<img src="' + img + '&w=600&auto=format&fit=crop" class="w-full object-cover">' +
+            '<div data-category="' + img.category + '" class="photo-card break-inside-avoid rounded-2xl overflow-hidden group relative cursor-pointer shadow-lg animate-fade-up">' +
+              '<img src="' + img.url + '&w=600&auto=format&fit=crop" class="w-full object-cover">' +
               '<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">' +
-                '<span class="text-accent text-xs font-bold uppercase tracking-wider mb-1">Campus Life</span>' +
+                '<span class="text-accent text-xs font-bold uppercase tracking-wider mb-1">' + img.category + '</span>' +
                 '<div class="flex justify-between items-center">' +
                   '<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur text-white flex items-center justify-center hover:bg-primary transition-colors"><i class="ri-zoom-in-line"></i></button>' +
                   '<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur text-white flex items-center justify-center hover:bg-primary transition-colors"><i class="ri-download-line"></i></button>' +
@@ -129,22 +127,46 @@ pages['photo-gallery.html'] = `
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.photo-card');
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => {
+              b.classList.remove('bg-primary', 'text-white');
+              b.classList.add('bg-white/10', 'text-white');
+            });
+            btn.classList.add('bg-primary', 'text-white');
+            btn.classList.remove('bg-white/10');
+
+            const filter = btn.getAttribute('data-filter');
+            cards.forEach(card => {
+              if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = '';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+
 `;
 
 // ==========================================
 // 3. Video Gallery Page
 // ==========================================
 pages['video.html'] = `
-    <section class="relative h-[600px] flex items-center justify-center overflow-hidden bg-black">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden bg-black">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 animate-ken-burns">
       </div>
       <div class="container mx-auto px-6 relative z-20 text-center animate-fade-up">
-        <div class="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/50 text-white flex items-center justify-center text-3xl mx-auto mb-8 animate-pulse shadow-premium cursor-pointer hover:scale-110 transition-transform">
-          <i class="ri-play-fill ml-1"></i>
-        </div>
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">Video <span class="text-accent">Gallery</span></h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-light">Experience InstituteHub through videos showcasing classrooms, workshops, placements, seminars, events, student life, and campus activities.</p>
       </div>
     </section>
 
@@ -181,14 +203,13 @@ pages['video.html'] = `
 // 4. Events Page
 // ==========================================
 pages['events.html'] = `
-    <section class="relative h-[550px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover animate-ken-burns">
       </div>
       <div class="absolute inset-0 bg-gradient-to-b from-[#081C3A]/90 via-[#081C3A]/70 to-[#081C3A] z-10 mix-blend-multiply"></div>
       <div class="container mx-auto px-6 relative z-20 text-center animate-fade-up">
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">Upcoming & Past <span class="text-accent">Events</span></h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-light">Discover workshops, seminars, competitions, hackathons, industrial visits, certification ceremonies, and campus events.</p>
       </div>
     </section>
 
@@ -226,26 +247,41 @@ pages['events.html'] = `
 // 5. Download Page
 // ==========================================
 pages['download.html'] = `
-    <section class="relative py-32 bg-gradient-to-br from-[#081C3A] to-primary overflow-hidden">
+    <section class="relative py-16 bg-gradient-to-br from-[#081C3A] to-primary overflow-hidden">
       <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]"></div>
       <div class="container mx-auto px-6 relative z-10 text-center animate-fade-up">
         <h1 class="text-5xl font-bold text-white mb-6">Download Center</h1>
-        <p class="text-lg text-white/80 max-w-2xl mx-auto">Access important documents, admit cards, brochures, prospectus, forms, syllabus, certificates, and notices.</p>
       </div>
     </section>
 
     <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
+        
+        <!-- Search and Filters for Downloads -->
+        <div class="mb-12 flex flex-col sm:flex-row gap-4 items-center justify-between animate-fade-up">
+          <div class="relative w-full sm:w-80 group">
+            <i class="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors"></i>
+            <input type="text" id="downloadSearch" placeholder="Search documents..." class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm">
+          </div>
+          <div class="flex gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 hide-scrollbar">
+            <button class="dl-filter-btn px-4 py-2 bg-primary text-white rounded-full text-xs font-bold shadow-sm cursor-pointer" data-filter="all">All Documents</button>
+            <button class="dl-filter-btn px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer" data-filter="syllabus">Syllabus</button>
+            <button class="dl-filter-btn px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer" data-filter="form">Forms</button>
+            <button class="dl-filter-btn px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer" data-filter="calendar">Calendar</button>
+            <button class="dl-filter-btn px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-xs font-bold hover:bg-gray-50 transition-all cursor-pointer" data-filter="prospectus">Prospectus</button>
+          </div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           ${[
-            {n: "Institute Prospectus 2026", s: "4.5 MB", t: "PDF"},
-            {n: "O-Level Syllabus & Guidelines", s: "1.2 MB", t: "PDF"},
-            {n: "Admission Registration Form", s: "800 KB", t: "PDF"},
-            {n: "CCC Exam Sample Papers", s: "2.1 MB", t: "ZIP"},
-            {n: "Academic Calendar 2026-27", s: "1.5 MB", t: "PDF"},
-            {n: "Franchise Application Form", s: "950 KB", t: "PDF"}
+            {n: "Institute Prospectus 2026", s: "4.5 MB", t: "PDF", cat: "prospectus"},
+            {n: "O-Level Syllabus & Guidelines", s: "1.2 MB", t: "PDF", cat: "syllabus"},
+            {n: "Admission Registration Form", s: "800 KB", t: "PDF", cat: "form"},
+            {n: "CCC Exam Sample Papers", s: "2.1 MB", t: "ZIP", cat: "syllabus"},
+            {n: "Academic Calendar 2026-27", s: "1.5 MB", t: "PDF", cat: "calendar"},
+            {n: "Franchise Application Form", s: "950 KB", t: "PDF", cat: "form"}
           ].map(d => 
-            '<div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex items-center gap-6 group">' +
+            '<div data-name="' + d.n.toLowerCase() + '" data-category="' + d.cat + '" class="download-item bg-white rounded-3xl p-6 border border-gray-200 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex items-center gap-6 group">' +
               '<div class="w-16 h-16 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center text-3xl shrink-0 group-hover:bg-red-500 group-hover:text-white transition-colors">' +
                 '<i class="ri-file-pdf-2-fill"></i>' +
               '</div>' +
@@ -261,17 +297,59 @@ pages['download.html'] = `
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('downloadSearch');
+        const buttons = document.querySelectorAll('.dl-filter-btn');
+        const items = document.querySelectorAll('.download-item');
+
+        function filterDownloads() {
+          const query = searchInput.value.toLowerCase().trim();
+          const activeFilter = document.querySelector('.dl-filter-btn.bg-primary').getAttribute('data-filter');
+
+          items.forEach(item => {
+            const name = item.getAttribute('data-name');
+            const category = item.getAttribute('data-category');
+
+            const matchesSearch = !query || name.includes(query);
+            const matchesCategory = activeFilter === 'all' || category === activeFilter;
+
+            if (matchesSearch && matchesCategory) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener('input', filterDownloads);
+        }
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => {
+              b.classList.remove('bg-primary', 'text-white');
+              b.classList.add('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+            });
+            btn.classList.add('bg-primary', 'text-white');
+            btn.classList.remove('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+            filterDownloads();
+          });
+        });
+      });
+    </script>
 `;
 
 // ==========================================
 // 6. Online Payment Page
 // ==========================================
 pages['online-payment.html'] = `
-    <section class="relative pt-32 pb-24 bg-gradient-to-br from-[#081C3A] via-primary to-primary-light overflow-hidden">
+    <section class="relative pt-20 pb-16 bg-gradient-to-br from-[#081C3A] via-primary to-primary-light overflow-hidden">
       <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-[100px]"></div>
       <div class="container mx-auto px-6 relative z-10 text-center animate-fade-up">
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Secure Online Fee Payment</h1>
-        <p class="text-white/80">Pay your course fees securely using UPI, Debit Card, Credit Card, Net Banking, or Wallet.</p>
       </div>
     </section>
 

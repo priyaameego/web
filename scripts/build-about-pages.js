@@ -5,7 +5,7 @@ const layoutHtml = fs.readFileSync(path.join(__dirname, '../src/layout.html'), '
 
 function getHero(title, desc) {
   return `
-    <section class="relative h-[550px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
              alt="Campus" 
@@ -19,7 +19,6 @@ function getHero(title, desc) {
           About InstituteHub
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 drop-shadow-2xl">${title}</h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 font-light">${desc}</p>
       </div>
     </section>
   `;

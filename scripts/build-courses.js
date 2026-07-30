@@ -5,7 +5,7 @@ const layoutHtml = fs.readFileSync(path.join(__dirname, '../src/layout.html'), '
 
 const coursesContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" 
              alt="Computer Lab" 
@@ -24,10 +24,6 @@ const coursesContent = `
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 drop-shadow-2xl">
           Learn <span class="text-accent">Future-Ready Skills</span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-          Explore industry-focused computer courses, programming, digital skills, accounting, hardware, networking, design, communication, and professional certifications to build a successful career.
-        </p>
 
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400">
           <a href="index.html" class="hover:text-white transition-colors">Home</a>
