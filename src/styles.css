@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary: #0B1F3A;
+  --color-primary-dark: #051124;
+  --color-primary-light: #1A365D;
+  --color-accent: #C9A96E;
+  --color-secondary: #FAFBFC;
+  --color-text: #1E293B;
+  --color-muted: #64748B;
+
   /* Luxury Color Palette */
   --color-navy: #040B16;
   --color-deep-navy: #0A0F1C;

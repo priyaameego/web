@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstituteHub | Premium Education</title>
+  <meta name="description" content="InstituteHub - Where education meets excellence. Ultra premium education institute offering top-tier courses, placement support, and expert faculty.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../dist/output.css">
+  
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* Custom animations for Homepage */
+    @keyframes infiniteScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: infiniteScroll 20s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    .dark-glass {
+      background: rgba(10, 15, 28, 0.95) !important;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans selection:bg-primary selection:text-white antialiased overflow-x-hidden">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
+    <!-- Topbar -->
+    <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
+      <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-6">
+          <span class="flex items-center gap-2 font-medium tracking-wide"><i class="ri-map-pin-2-line text-accent"></i> Nagwa Lanka, Varanasi, Pin 221005</span>
+          <span class="flex items-center gap-2 font-medium tracking-wide"><i class="ri-phone-line text-accent"></i> <a href="tel:9794412732" class="hover:text-white transition-colors">9794412732</a></span>
+        </div>
+        <div class="flex items-center font-medium gap-3">
+          <a href=".././/certificate-verification.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-accent text-white hover:bg-yellow-600 transition-colors shadow-sm">
+            <i class="ri-medal-line"></i> Certificate Verification
+          </a>
+          <a href=".././/login.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-primary-light text-white hover:bg-blue-700 transition-colors shadow-sm">
+            <i class="ri-draft-line"></i> Online Exam
+          </a>
+          <a href=".././/login.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-colors border border-white/10 shadow-sm">
+            <i class="ri-user-line"></i> Student Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="container mx-auto px-6 lg:px-12 py-3 flex justify-between items-center">
+      <!-- Brand -->
+      <a href=".././index.html" class="flex items-center group">
+        <img src="https://www.institutehub.in/storage/dashboard/branding/brand-strip/JasdHk2McXjAjd2NRBl1qeCzFAR4QWGHuJWiC7Dz.jpg" alt="InstituteHub Logo" class="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex items-center gap-7 text-[15px] font-medium text-gray-600">
+        <li><a href=".././index.html" class="text-primary font-semibold transition-colors">Home</a></li>
+        
+        <li class="relative group">
+          <a href="javascript:void(0);" class="hover:text-primary transition-colors flex items-center gap-1 py-2">About Us <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
+          <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
+            <li><a href=".././about/director-ceo-message.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Director & CEO Message</a></li>
+            <li><a href=".././about/who-we-are.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Who We Are</a></li>
+            <li><a href=".././about/our-campus-and-approach.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Our Campus & Approach</a></li>
+            <li><a href=".././our-team.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Our Team</a></li>
+            <li><a href=".././mission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Vision & Mission</a></li>
+            <li><a href=".././linkage-authorization.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Linkage & Authorization</a></li>
+            <li><a href=".././testimonial.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Testimonial</a></li>
+          </ul>
+        </li>
+        
+        <li><a href=".././courses.html" class="hover:text- transition-colors py-2">Courses</a></li>
+        
+        <li class="relative group">
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Student Zone <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
+          <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
+            <li><a href=".././online-enquiry.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Enquiry</a></li>
+            <li><a href=".././online-admission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Online Admission</a></li>
+            <li><a href=".././student-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Verification</a></li>
+            <li><a href=".././certificate-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Certificate Verification</a></li>
+            <li><a href=".././marksheet-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Marksheet Verification</a></li>
+            <li><a href=".././download-admit-card.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Admit Card</a></li>
+            <li><a href=".././login.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Login</a></li>
+          </ul>
+        </li>
+        
+        <li class="relative group">
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Franchise <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
+          <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
+            <li><a href=".././franchise/registration.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Registration</a></li>
+            <li><a href=".././franchise/verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Verification</a></li>
+            <li><a href=".././franchise/centers.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Find Centers</a></li>
+          </ul>
+        </li>
+        
+        <li><a href=".././career.html" class="hover:text- transition-colors py-2">Career</a></li>
+        
+        <li class="relative group">
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Highlight <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
+          <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
+            <li><a href=".././blog.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Blog</a></li>
+            <li><a href=".././news.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">News</a></li>
+            <li><a href=".././photo-gallery.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Photo Gallery</a></li>
+            <li><a href=".././video.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Video Gallery</a></li>
+            <li><a href=".././events.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Events</a></li>
+            <li><a href=".././download.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Download</a></li>
+            <li><a href=".././online-payment.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Online Payment</a></li>
+          </ul>
+        </li>
+        
+        <li><a href=".././faq.html" class="hover:text- transition-colors py-2">FAQ</a></li>
+        
+        <li><a href=".././contact.html" class="hover:text- transition-colors py-2">Contact Us</a></li>
+      </ul>
+      
+      <!-- CTA / Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href=".././login.html" class="hidden lg:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-light hover:shadow-lg transition-all duration-300 magnetic-btn">
+          <i class="ri-user-line"></i> Login
+        </a>
+        <button id="mobile-menu-btn" class="lg:hidden text-2xl text-primary focus:outline-none">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed inset-y-0 right-0 h-screen w-full sm:w-[320px] bg-white shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 overflow-y-auto">
+      <div class="p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white z-10">
+        <img src="https://www.institutehub.in/storage/dashboard/branding/brand-strip/JasdHk2McXjAjd2NRBl1qeCzFAR4QWGHuJWiC7Dz.jpg" alt="Logo" class="h-10 w-auto object-contain">
+        <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 focus:outline-none text-3xl"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="p-6 pb-24">
+        <ul class="flex flex-col gap-2 text-[15px] font-medium text-gray-700">
+          <li><a href=".././index.html" class="block py-3 hover:text-primary border-b border-gray-50">Home</a></li>
+          
+          <!-- About Us Dropdown -->
+          <li>
+            <button class="w-full flex justify-between items-center py-3 border-b border-gray-50 focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+              About Us <i class="ri-arrow-down-s-line transition-transform text-lg"></i>
+            </button>
+            <ul class="hidden flex-col gap-2 pl-4 py-2 bg-gray-50 rounded-lg mt-1">
+              <li><a href=".././about/director-ceo-message.html" class="block py-2 text-sm">Director & CEO Message</a></li>
+              <li><a href=".././about/who-we-are.html" class="block py-2 text-sm">Who We Are</a></li>
+              <li><a href=".././about/our-campus-and-approach.html" class="block py-2 text-sm">Our Campus & Approach</a></li>
+              <li><a href=".././our-team.html" class="block py-2 text-sm">Our Team</a></li>
+              <li><a href=".././mission.html" class="block py-2 text-sm">Vision & Mission</a></li>
+              <li><a href=".././linkage-authorization.html" class="block py-2 text-sm">Linkage & Authorization</a></li>
+              <li><a href=".././testimonial.html" class="block py-2 text-sm">Testimonial</a></li>
+            </ul>
+          </li>
+
+          <li><a href=".././courses.html" class="block py-3 hover:text-primary border-b border-gray-50">Courses</a></li>
+
+          <!-- Student Zone Dropdown -->
+          <li>
+            <button class="w-full flex justify-between items-center py-3 border-b border-gray-50 focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+              Student Zone <i class="ri-arrow-down-s-line transition-transform text-lg"></i>
+            </button>
+            <ul class="hidden flex-col gap-2 pl-4 py-2 bg-gray-50 rounded-lg mt-1">
+              <li><a href=".././online-enquiry.html" class="block py-2 text-sm">Student Enquiry</a></li>
+              <li><a href=".././online-admission.html" class="block py-2 text-sm">Online Admission</a></li>
+              <li><a href=".././student-verification.html" class="block py-2 text-sm">Student Verification</a></li>
+              <li><a href=".././certificate-verification.html" class="block py-2 text-sm">Certificate Verification</a></li>
+              <li><a href=".././marksheet-verification.html" class="block py-2 text-sm">Marksheet Verification</a></li>
+              <li><a href=".././download-admit-card.html" class="block py-2 text-sm">Admit Card</a></li>
+              <li><a href=".././login.html" class="block py-2 text-sm">Student Login</a></li>
+            </ul>
+          </li>
+
+          <!-- Franchise Dropdown -->
+          <li>
+            <button class="w-full flex justify-between items-center py-3 border-b border-gray-50 focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+              Franchise <i class="ri-arrow-down-s-line transition-transform text-lg"></i>
+            </button>
+            <ul class="hidden flex-col gap-2 pl-4 py-2 bg-gray-50 rounded-lg mt-1">
+              <li><a href=".././franchise/registration.html" class="block py-2 text-sm">Registration</a></li>
+              <li><a href=".././franchise/verification.html" class="block py-2 text-sm">Verification</a></li>
+              <li><a href=".././franchise/centers.html" class="block py-2 text-sm">Find Centers</a></li>
+            </ul>
+          </li>
+
+          <li><a href=".././career.html" class="block py-3 hover:text-primary border-b border-gray-50">Career</a></li>
+
+          <!-- Highlights Dropdown -->
+          <li>
+            <button class="w-full flex justify-between items-center py-3 border-b border-gray-50 focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+              Highlights <i class="ri-arrow-down-s-line transition-transform text-lg"></i>
+            </button>
+            <ul class="hidden flex-col gap-2 pl-4 py-2 bg-gray-50 rounded-lg mt-1">
+              <li><a href=".././blog.html" class="block py-2 text-sm">Blog</a></li>
+              <li><a href=".././news.html" class="block py-2 text-sm">News</a></li>
+              <li><a href=".././photo-gallery.html" class="block py-2 text-sm">Photo Gallery</a></li>
+              <li><a href=".././video.html" class="block py-2 text-sm">Video Gallery</a></li>
+              <li><a href=".././events.html" class="block py-2 text-sm">Events</a></li>
+              <li><a href=".././download.html" class="block py-2 text-sm">Download</a></li>
+              <li><a href=".././online-payment.html" class="block py-2 text-sm">Online Payment</a></li>
+            </ul>
+          </li>
+
+          <li><a href=".././faq.html" class="block py-3 hover:text-primary border-b border-gray-50">FAQ</a></li>
+          <li><a href=".././contact.html" class="block py-3 hover:text-primary">Contact Us</a></li>
+        </ul>
+        
+        <div class="mt-8">
+          <a href=".././login.html" class="flex items-center justify-center gap-2 bg-primary text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-light transition-all w-full shadow-lg">
+            <i class="ri-user-line"></i> Student Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[140px] lg:pt-[160px]">
+    
+    <!-- Premium Light Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/50 py-20 lg:py-28 border-b border-gray-200 overflow-hidden">
+      <!-- Sophisticated Background patterns -->
+      <div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 32px 32px;"></div>
+      
+      <!-- Premium glowing orbs -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-100/40 to-purple-100/40 blur-3xl z-0 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-pink-100/30 to-orange-50/30 blur-3xl z-0 pointer-events-none"></div>
+
+      <div class="container mx-auto px-6 lg:px-12 relative z-10">
+        <div class="w-full lg:w-3/4">
+          
+          <!-- Breadcrumb Fixed & Styled inside a pill -->
+          <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 mb-8 font-medium bg-white/60 backdrop-blur-md border border-gray-200/60 inline-flex px-4 py-2 rounded-full shadow-sm">
+            <a href="../index.html" class="hover:text-primary transition-colors flex items-center gap-1"><i class="ri-home-4-line"></i> Home</a>
+            <i class="ri-arrow-right-s-line text-gray-400"></i>
+            <a href="../courses.html" class="hover:text-primary transition-colors">Courses</a>
+            <i class="ri-arrow-right-s-line text-gray-400"></i>
+            <span class="text-primary font-bold">DCA - 6 Months</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+            DCA - 6 Months
+          </h1>
+          
+          <!-- Premium Badges -->
+          <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-700">
+            <div class="flex items-center gap-2 bg-white/80 backdrop-blur border border-gray-200/80 px-4 py-2 rounded-full shadow-sm">
+              <i class="ri-verified-badge-fill text-blue-500 text-lg"></i>
+              <span>By Webcodian Institute</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/80 backdrop-blur border border-gray-200/80 px-4 py-2 rounded-full shadow-sm">
+              <i class="ri-global-fill text-indigo-500 text-lg"></i>
+              <span>Computer Applications</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-white/80 backdrop-blur border border-gray-200/80 px-4 py-2 rounded-full shadow-sm">
+              <div class="flex text-yellow-400 text-base">
+                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              </div>
+              <span class="text-slate-900 font-extrabold ml-1">(4.9 Reviews)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <section class="container mx-auto px-6 lg:px-12 py-10 relative">
+      <div class="flex flex-col lg:flex-row gap-12">
+        
+        <!-- Left Column -->
+        <div class="w-full lg:w-2/3">
+          
+          <!-- Pill-style Tabs -->
+          <div class="bg-gray-50 rounded-xl p-2 mb-8 sticky top-[100px] z-40 border border-gray-100 flex overflow-x-auto hide-scrollbar">
+            <a href="#curriculum" class="flex-1 text-center py-3 px-4 rounded-lg font-bold text-gray-900 hover:text-primary transition-colors">Curriculum</a>
+            <a href="#overview" class="flex-1 text-center py-3 px-4 rounded-lg font-bold text-gray-900 hover:text-primary transition-colors">Overview</a>
+            <a href="#instructor" class="flex-1 text-center py-3 px-4 rounded-lg font-bold text-primary border-b-2 border-primary bg-white shadow-sm transition-colors">Instructor</a>
+            <a href="#reviews" class="flex-1 text-center py-3 px-4 rounded-lg font-bold text-gray-900 hover:text-primary transition-colors">Reviews</a>
+          </div>
+
+          <!-- Instructor / Overview block as seen in Image 1 -->
+          <div class="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm mb-12 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+            <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div class="w-16 h-16 rounded-xl border border-gray-100 flex items-center justify-center p-2 bg-gray-50 mx-auto sm:mx-0">
+                <img src="https://www.institutehub.in/storage/dashboard/branding/brand-strip/JasdHk2McXjAjd2NRBl1qeCzFAR4QWGHuJWiC7Dz.jpg" alt="Logo" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 text-lg">Webcodian Institute</h3>
+                <p class="text-primary text-sm font-medium">Instructor</p>
+                <div class="flex justify-center sm:justify-start gap-2 mt-3">
+                  <a href="../contact.html" class="px-4 py-1.5 bg-[#4F46E5] text-white text-sm font-bold rounded hover:bg-blue-700 transition-colors">Contact</a>
+                  <a href="tel:9794412732" class="px-4 py-1.5 border border-[#4F46E5] text-[#4F46E5] text-sm font-bold rounded hover:bg-blue-50 transition-colors flex items-center gap-1">
+                    <i class="ri-phone-line"></i> 9794412732
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 text-sm font-medium text-gray-500 w-full md:w-auto mt-4 md:mt-0">
+              <span class="flex items-center gap-1.5"><i class="ri-book-read-line text-primary"></i> 26 Courses</span>
+              <span class="flex items-center gap-1.5"><i class="ri-file-list-line text-primary"></i> 4+ Lessons</span>
+              <span class="flex items-center gap-1.5"><i class="ri-time-line text-primary"></i> 6 Months</span>
+            </div>
+          </div>
+          
+          <div id="overview" class="scroll-mt-40 mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Course Overview</h2>
+            <div class="prose prose-lg text-gray-600 max-w-none text-sm leading-relaxed">
+              <p>Welcome to the DCA - 6 Months program. This course is meticulously designed for individuals looking to gain deep insights and hands-on experience in Computer Applications. By blending theoretical concepts with practical lab sessions, we ensure our students are industry-ready upon graduation.</p>
+            </div>
+          </div>
+
+          <div id="curriculum" class="scroll-mt-40 mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Curriculum</h2>
+            <div class="border border-gray-100 rounded-xl overflow-hidden bg-white shadow-sm">
+              <div class="border-b border-gray-100">
+                <button class="w-full text-left px-6 py-5 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.ri-arrow-down-s-line').classList.toggle('rotate-180')">
+                  <span class="font-bold text-gray-900">Module 1: Fundamentals</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-400 transition-transform"></i>
+                </button>
+                <div class="hidden">
+                  <ul class="flex flex-col text-sm text-gray-600 bg-white">
+                    <li class="px-6 py-4 flex justify-between border-t border-gray-50 hover:bg-gray-50">
+                      <span class="flex items-center gap-3"><i class="ri-play-circle-line text-primary text-lg"></i> Introduction</span>
+                      <span class="text-gray-400">15 mins</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column (Sticky Sidebar) -->
+        <div class="w-full lg:w-1/3">
+          <div class="sticky top-[100px] z-30 mb-10">
+            <!-- Sidebar Card from Image 1 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+              
+              <!-- Placeholder Image Box -->
+              <div class="h-48 bg-gray-200 flex items-center justify-center p-4">
+                 <div class="w-full h-full border-4 border-gray-300 rounded-lg flex items-center justify-center">
+                    <i class="ri-image-line text-6xl text-gray-300"></i>
+                 </div>
+              </div>
+              
+              <div class="p-6 bg-white">
+                <h3 class="font-bold text-gray-900 text-lg mb-6">Course includes:</h3>
+                
+                <div class="space-y-4 text-sm text-gray-500">
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-translate-2 text-blue-500"></i> Language:</span>
+                    <span class="font-bold text-gray-900">Hindi / English</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-time-line text-blue-500"></i> Duration:</span>
+                    <span class="font-bold text-gray-900">6 Months</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-wifi-line text-blue-500"></i> Online Price:</span>
+                    <span class="font-bold text-blue-600">₹4,500 <span class="text-xs text-gray-400 line-through ml-1">₹6,000</span></span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-building-4-line text-blue-500"></i> Offline Price:</span>
+                    <span class="font-bold text-blue-600">₹4,500 <span class="text-xs text-gray-400 line-through ml-1">₹6,000</span></span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-user-line text-blue-500"></i> Instructor:</span>
+                    <span class="font-bold text-gray-900">Webcodian Institute</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="ri-medal-line text-blue-500"></i> Certificate:</span>
+                    <span class="font-bold text-gray-900">Yes</span>
+                  </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3 mt-8">
+                  <a href="../online-enquiry.html" class="flex items-center justify-center gap-1 bg-[#4F46E5] text-white py-3 rounded-lg font-bold text-sm hover:bg-blue-700 transition-colors shadow-sm">
+                    Enquiry <i class="ri-arrow-right-line"></i>
+                  </a>
+                  <a href="../online-admission.html" class="flex items-center justify-center gap-1 bg-white border border-[#4F46E5] text-[#4F46E5] py-3 rounded-lg font-bold text-sm hover:bg-blue-50 transition-colors shadow-sm">
+                    Buy now <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            
+            <!-- Floating WhatsApp Icon -->
+            <a href="https://wa.me/919794412732" class="fixed bottom-6 left-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform z-50">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#081C3A] mesh-gradient-dark text-gray-300 pt-24 pb-8 lg:pt-28 lg:pb-10 relative overflow-hidden text-sm mt-0 border-t-0">
+  <div class="noise-overlay"></div>
+  <!-- Animated glow orbs -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow" style="animation-delay: 2s;"></div>
+
+  <div class="container mx-auto px-6 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-12">
+      
+      <!-- Column 1 -->
+      <div>
+        <div class="glass-card-3d-dark rounded-[24px] p-4 inline-block mb-8 shadow-[0_0_30px_rgba(37,99,235,0.15)] group transition-all duration-500 hover:shadow-[0_0_40px_rgba(139,92,246,0.3)] hover:-translate-y-2">
+          <div class="relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-md p-2 border border-white/10">
+             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[marquee_1.5s_ease-in-out]"></div>
+             <img src="https://www.institutehub.in/storage/dashboard/branding/brand-strip/JasdHk2McXjAjd2NRBl1qeCzFAR4QWGHuJWiC7Dz.jpg" alt="Logo" class="h-12 w-auto object-contain bg-white rounded-lg px-2">
+          </div>
+        </div>
+        <p class="leading-loose text-gray-400/90 font-medium">An ISO 9001:2015 certified institute offering practical computer courses, hands-on lab training, and recognized certifications to build job-ready skills.</p>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <h3 class="text-white font-bold text-xl mb-8 relative inline-block group cursor-default">
+          Explore
+          <span class="absolute -bottom-2 left-0 w-0 h-1 bg-white/10 border border-white/20 rounded-full transition-all duration-300 group-hover:w-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+        </h3>
+        <ul class="space-y-4">
+          <li><a href="../blog.html" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Blog</span></a></li>
+          <li><a href="../events.html" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Events</span></a></li>
+          <li><a href="../news.html" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">News</span></a></li>
+          <li><a href="../download.html" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Download</span></a></li>
+        </ul>
+      </div>
+      
+      <!-- Column 3 -->
+      <div>
+        <h3 class="text-white font-bold text-xl mb-8 relative inline-block group cursor-default">
+          Useful Links
+          <span class="absolute -bottom-2 left-0 w-0 h-1 bg-white/10 border border-white/20 rounded-full transition-all duration-300 group-hover:w-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+        </h3>
+        <ul class="space-y-4">
+          <li><a href="../#" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Terms & Conditions</span></a></li>
+          <li><a href="../#" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Privacy Policy</span></a></li>
+          <li><a href="../#" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Refund Policy</span></a></li>
+          <li><a href="../#" class="group flex items-center text-gray-400 hover:text-white transition-all duration-300"><i class="ri-arrow-right-line opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 text-blue-400 transition-all duration-300 mr-2"></i> <span class="group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-300">Cancellation Policy</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div>
+        <h3 class="text-white font-bold text-xl mb-8 relative inline-block group cursor-default">
+          Contact Us
+          <span class="absolute -bottom-2 left-0 w-0 h-1 bg-white/10 border border-white/20 rounded-full transition-all duration-300 group-hover:w-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+        </h3>
+        <ul class="space-y-6 text-gray-400">
+          <li class="flex items-center gap-4 group cursor-default">
+            <div class="w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 border border-white/5 group-hover:border-blue-500/30">
+              <i class="ri-map-pin-2-fill text-gray-400 group-hover:text-blue-400 text-xl group-hover:rotate-12 transition-all duration-300"></i>
+            </div>
+            <span class="font-medium group-hover:text-gray-200 transition-colors">123 Education Street, Tech Hub, City, Country 123456</span>
+          </li>
+          <li class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300 border border-white/5 group-hover:border-purple-500/30">
+              <i class="ri-phone-fill text-gray-400 group-hover:text-purple-400 text-xl group-hover:rotate-12 transition-all duration-300"></i>
+            </div>
+            <a href="tel:+919876543210" class="font-medium hover:text-white transition-colors">+91 98765 43210</a>
+          </li>
+          <li class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.3)] transition-all duration-300 border border-white/5 group-hover:border-pink-500/30">
+              <i class="ri-mail-send-fill text-gray-400 group-hover:text-pink-400 text-xl group-hover:rotate-12 transition-all duration-300"></i>
+            </div>
+            <a href="mailto:info@institutehub.in" class="font-medium hover:text-white transition-colors">info@institutehub.in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Animated Gradient Divider -->
+    <div class="relative w-full h-px my-10">
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent w-1/2 animate-[marquee_4s_ease-in-out_infinite_alternate]"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-4">
+      <div class="flex items-center gap-3 text-center md:text-left">
+        <p class="text-gray-500 font-medium tracking-wide">&copy; 2026 InstituteHub. All rights reserved.</p>
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 hidden md:block opacity-50"></span>
+        <p class="text-gray-500 font-medium tracking-wide hidden md:block opacity-75">Made with Excellence</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../#" class="magnetic-btn w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center text-gray-400 hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:border-blue-500/30 transition-all duration-300 group border border-white/5"><i class="ri-facebook-fill text-xl group-hover:-rotate-12 transition-transform"></i></a>
+        <a href="../#" class="magnetic-btn w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center text-gray-400 hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:border-purple-500/30 transition-all duration-300 group border border-white/5"><i class="ri-twitter-x-line text-xl group-hover:rotate-12 transition-transform"></i></a>
+        <a href="../#" class="magnetic-btn w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center text-gray-400 hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:border-pink-500/30 transition-all duration-300 group border border-white/5"><i class="ri-instagram-line text-xl group-hover:-rotate-12 transition-transform"></i></a>
+        <a href="../#" class="magnetic-btn w-12 h-12 rounded-full glass-panel-dark flex items-center justify-center text-gray-400 hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:border-blue-500/30 transition-all duration-300 group border border-white/5"><i class="ri-linkedin-fill text-xl group-hover:rotate-12 transition-transform"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>
+        

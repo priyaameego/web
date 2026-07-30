@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#2848FF",
-        primaryDark: "#071B3A",
-        accent: "#FFB22C",
-        secondary: "#F7F9FC",
-        text: "#111827",
-        muted: "#6B7280",
+        primary: "#0B1F3A", // Deep Navy
+        primaryDark: "#051124", 
+        accent: "#C9A96E", // Soft Gold
+        secondary: "#FAFBFC", // Warm Off-White
+        text: "#1E293B", // Charcoal
+        muted: "#64748B", // Slate Gray
       },
       fontFamily: {
         sans: ['Poppins', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
+      },
+      boxShadow: {
+        'premium': '0 4px 20px -2px rgba(11, 31, 58, 0.05)',
+        'premium-hover': '0 12px 30px -4px rgba(11, 31, 58, 0.1)',
       },
       animation: {
         'fade-up': 'fadeUp 0.8s ease-out forwards',
@@ -55,14 +59,6 @@ module.exports = {
           '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
           '50%': { opacity: '0.6', transform: 'scale(1.05)' },
         }
-      },
-      animation: {
-        'fade-up': 'fadeUp 0.8s ease-out forwards',
-        'fade-in': 'fadeIn 1s ease-out forwards',
-        'zoom-in': 'zoomIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'ken-burns': 'kenBurns 20s ease-out forwards',
-        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
       }
     },
   },

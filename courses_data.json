@@ -1,0 +1,83 @@
+[
+    {
+        "title": "DCA - 6 Months",
+        "slug": "dca-6-months",
+        "category": "Computer Applications",
+        "price": "\u20b94,500",
+        "old_price": "\u20b96,000",
+        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
+        "duration": "6 Months"
+    },
+    {
+        "title": "MS Office Complete Package",
+        "slug": "ms-office-complete-package",
+        "category": "Office Productivity",
+        "price": "\u20b93,075",
+        "old_price": "\u20b94,600",
+        "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+        "duration": "3 Months"
+    },
+    {
+        "title": "Python for Beginners",
+        "slug": "python-for-beginners",
+        "category": "Programming",
+        "price": "\u20b94,500",
+        "old_price": "\u20b96,000",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+        "duration": "3 Months"
+    },
+    {
+        "title": "ADCA - 12 Months",
+        "slug": "adca-12-months",
+        "category": "Computer Applications",
+        "price": "\u20b98,500",
+        "old_price": "\u20b912,000",
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
+        "duration": "12 Months"
+    },
+    {
+        "title": "Basic Data Entry Operator (DEO)",
+        "slug": "basic-data-entry-operator-deo",
+        "category": "Office Productivity",
+        "price": "\u20b92,500",
+        "old_price": "\u20b94,000",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+        "duration": "2 Months"
+    },
+    {
+        "title": "C Programming Fundamentals",
+        "slug": "c-programming-fundamentals",
+        "category": "Programming",
+        "price": "\u20b93,500",
+        "old_price": "\u20b95,000",
+        "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop",
+        "duration": "3 Months"
+    },
+    {
+        "title": "Certificate in Computer Concepts (CCC Prep)",
+        "slug": "certificate-in-computer-concepts-ccc-prep",
+        "category": "Foundation",
+        "price": "\u20b93,000",
+        "old_price": "\u20b94,500",
+        "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop",
+        "duration": "3 Months"
+    },
+    {
+        "title": "CorelDRAW & Page Layout",
+        "slug": "coreldraw-page-layout",
+        "category": "Graphic Design",
+        "price": "\u20b94,000",
+        "old_price": "\u20b96,000",
+        "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop",
+        "duration": "3 Months"
+    },
+    {
+        "title": "Cyber Safety for Students",
+        "slug": "cyber-safety-for-students",
+        "category": "Cyber Security",
+        "price": "\u20b91,500",
+        "old_price": "\u20b93,000",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
+        "duration": "1 Month"
+    }
+]

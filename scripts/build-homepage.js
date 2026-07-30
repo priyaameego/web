@@ -49,7 +49,7 @@ const homepageHtml = `<!DOCTYPE html>
 <body class="bg-gray-50 text-gray-900 font-sans selection:bg-primary selection:text-white antialiased overflow-x-hidden">
 
   <!-- Topbar & Navbar -->
-  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-white/90 backdrop-blur-md border-b border-gray-100">
+  <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 shadow-sm bg-slate-50 border-b border-gray-100">
     <!-- Topbar -->
     <div class="bg-primary text-white/90 text-sm py-2 hidden lg:block border-b border-white/10">
       <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -58,11 +58,14 @@ const homepageHtml = `<!DOCTYPE html>
           <span class="flex items-center gap-2 font-medium tracking-wide"><i class="ri-phone-line text-accent"></i> <a href="tel:9794412732" class="hover:text-white transition-colors">9794412732</a></span>
         </div>
         <div class="flex items-center font-medium gap-3">
-          <a href="certificate-verification.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-accent text-[#081C3A] hover:bg-yellow-500 transition-colors shadow-sm font-bold">
-            <i class="ri-medal-line"></i> Verify Certificate
+          <a href="certificate-verification.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-accent text-white hover:bg-yellow-600 transition-colors shadow-sm">
+            <i class="ri-medal-line"></i> Certificate Verification
+          </a>
+          <a href="login.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-primary-light text-white hover:bg-blue-700 transition-colors shadow-sm">
+            <i class="ri-draft-line"></i> Online Exam
           </a>
           <a href="login.html" class="flex items-center gap-2 px-5 py-1.5 rounded bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-colors border border-white/10 shadow-sm">
-            <i class="ri-user-line"></i> Student Portal
+            <i class="ri-user-line"></i> Student Login
           </a>
         </div>
       </div>
@@ -76,72 +79,72 @@ const homepageHtml = `<!DOCTYPE html>
       </a>
 
       <!-- Desktop Menu -->
-      <ul class="hidden lg:flex items-center gap-7 text-[15px] font-medium text-white/90">
-        <li><a href="index.html" class="text-white font-bold transition-colors">Home</a></li>
+      <ul class="hidden lg:flex items-center gap-7 text-[15px] font-medium text-gray-600">
+        <li><a href="index.html" class="text-primary font-semibold transition-colors">Home</a></li>
         
         <li class="relative group">
-          <a href="javascript:void(0);" class="hover:text-white transition-colors flex items-center gap-1 py-2">About Us <i class="ri-arrow-down-s-line text-white/50 group-hover:rotate-180 transition-transform"></i></a>
+          <a href="javascript:void(0);" class="hover:text-primary transition-colors flex items-center gap-1 py-2">About Us <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
           <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
             <li><a href="about/director-ceo-message.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Director & CEO Message</a></li>
             <li><a href="about/who-we-are.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Who We Are</a></li>
-            <li><a href="about/our-campus-and-approach.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Our Campus & Approach</a></li>
-            <li><a href="our-team.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Our Team</a></li>
-            <li><a href="mission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Vision & Mission</a></li>
-            <li><a href="linkage-authorization.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Linkage & Authorization</a></li>
-            <li><a href="testimonial.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Testimonial</a></li>
+            <li><a href="about/our-campus-and-approach.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Our Campus & Approach</a></li>
+            <li><a href="our-team.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Our Team</a></li>
+            <li><a href="mission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Vision & Mission</a></li>
+            <li><a href="linkage-authorization.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Linkage & Authorization</a></li>
+            <li><a href="testimonial.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Testimonial</a></li>
           </ul>
         </li>
         
-        <li><a href="courses.html" class="hover:text-white transition-colors py-2">Courses</a></li>
+        <li><a href="courses.html" class="hover:text- transition-colors py-2">Courses</a></li>
         
         <li class="relative group">
-          <a href="javascript:void(0);" class="hover:text-white transition-colors flex items-center gap-1 py-2">Student Zone <i class="ri-arrow-down-s-line text-white/50 group-hover:rotate-180 transition-transform"></i></a>
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Student Zone <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
           <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
-            <li><a href="online-enquiry.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Student Enquiry</a></li>
-            <li><a href="online-admission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Online Admission</a></li>
-            <li><a href="student-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Student Verification</a></li>
-            <li><a href="certificate-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Certificate Verification</a></li>
-            <li><a href="marksheet-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Marksheet Verification</a></li>
-            <li><a href="download-admit-card.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Admit Card</a></li>
-            <li><a href="login.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Student Login</a></li>
+            <li><a href="online-enquiry.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Enquiry</a></li>
+            <li><a href="online-admission.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Online Admission</a></li>
+            <li><a href="student-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Verification</a></li>
+            <li><a href="certificate-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Certificate Verification</a></li>
+            <li><a href="marksheet-verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Marksheet Verification</a></li>
+            <li><a href="download-admit-card.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Admit Card</a></li>
+            <li><a href="login.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Student Login</a></li>
           </ul>
         </li>
         
         <li class="relative group">
-          <a href="javascript:void(0);" class="hover:text-white transition-colors flex items-center gap-1 py-2">Franchise <i class="ri-arrow-down-s-line text-white/50 group-hover:rotate-180 transition-transform"></i></a>
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Franchise <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
           <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
-            <li><a href="franchise/registration.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Registration</a></li>
-            <li><a href="franchise/verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Verification</a></li>
-            <li><a href="franchise/centers.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Find Centers</a></li>
+            <li><a href="franchise/registration.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Registration</a></li>
+            <li><a href="franchise/verification.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Verification</a></li>
+            <li><a href="franchise/centers.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Find Centers</a></li>
           </ul>
         </li>
         
-        <li><a href="career.html" class="hover:text-white transition-colors py-2">Career</a></li>
+        <li><a href="career.html" class="hover:text- transition-colors py-2">Career</a></li>
         
         <li class="relative group">
-          <a href="javascript:void(0);" class="hover:text-white transition-colors flex items-center gap-1 py-2">Highlight <i class="ri-arrow-down-s-line text-white/50 group-hover:rotate-180 transition-transform"></i></a>
+          <a href="javascript:void(0);" class="hover:text- transition-colors flex items-center gap-1 py-2">Highlight <i class="ri-arrow-down-s-line text-gray-400 group-hover:rotate-180 transition-transform"></i></a>
           <ul class="absolute top-full left-0 w-[240px] bg-white rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col border border-gray-100 py-3 mt-1 overflow-hidden z-50">
-            <li><a href="blog.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Blog</a></li>
-            <li><a href="news.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">News</a></li>
-            <li><a href="photo-gallery.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Photo Gallery</a></li>
-            <li><a href="video.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Video Gallery</a></li>
-            <li><a href="events.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Events</a></li>
-            <li><a href="download.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Download</a></li>
-            <li><a href="online-payment.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text-primary hover:bg-blue-50/50 transition-colors">Online Payment</a></li>
+            <li><a href="blog.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Blog</a></li>
+            <li><a href="news.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">News</a></li>
+            <li><a href="photo-gallery.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Photo Gallery</a></li>
+            <li><a href="video.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Video Gallery</a></li>
+            <li><a href="events.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Events</a></li>
+            <li><a href="download.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Download</a></li>
+            <li><a href="online-payment.html" class="block px-6 py-2.5 text-[15px] text-gray-700 hover:text- hover:bg-blue-50/50 transition-colors">Online Payment</a></li>
           </ul>
         </li>
         
-        <li><a href="faq.html" class="hover:text-white transition-colors py-2">FAQ</a></li>
+        <li><a href="faq.html" class="hover:text- transition-colors py-2">FAQ</a></li>
         
-        <li><a href="contact.html" class="hover:text-white transition-colors py-2">Contact Us</a></li>
+        <li><a href="contact.html" class="hover:text- transition-colors py-2">Contact Us</a></li>
       </ul>
       
-      <!-- CTA -->
+      <!-- CTA / Mobile Toggle -->
       <div class="flex items-center gap-4">
-        <a href="online-admission.html" class="hidden lg:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-primary-light hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
-          Apply Now
+        <a href="login.html" class="hidden lg:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-light hover:shadow-lg transition-all duration-300 magnetic-btn">
+          <i class="ri-user-line"></i> Login
         </a>
-        <button id="mobile-menu-btn" class="lg:hidden text-2xl text-white focus:outline-none">
+        <button id="mobile-menu-btn" class="lg:hidden text-2xl text-primary focus:outline-none">
           <i class="ri-menu-4-line"></i>
         </button>
       </div>
@@ -585,7 +588,7 @@ const homepageHtml = `<!DOCTYPE html>
                   <span class="text-sm text-gray-400 line-through mb-1">₹12,000</span>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
-                  <a href="courses.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
+                  <a href="course/adca-12-months.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
                   <a href="online-admission.html" class="px-4 py-3 bg-primary text-white font-bold text-sm text-center rounded-xl hover:bg-primary-light hover:shadow-lg transition-all shadow-md">Apply Now</a>
                 </div>
               </div>
@@ -610,7 +613,7 @@ const homepageHtml = `<!DOCTYPE html>
                   <span class="text-sm text-gray-400 line-through mb-1">₹6,000</span>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
-                  <a href="courses.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
+                  <a href="course/python-for-beginners.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
                   <a href="online-admission.html" class="px-4 py-3 bg-primary text-white font-bold text-sm text-center rounded-xl hover:bg-primary-light hover:shadow-lg transition-all shadow-md">Apply Now</a>
                 </div>
               </div>
@@ -635,7 +638,7 @@ const homepageHtml = `<!DOCTYPE html>
                   <span class="text-sm text-gray-400 line-through mb-1">₹8,000</span>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
-                  <a href="courses.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
+                  <a href="course/tally-erp-9-gst.html" class="px-4 py-3 bg-gray-50 border border-gray-200 text-gray-700 font-bold text-sm text-center rounded-xl hover:bg-gray-100 transition-colors">Details</a>
                   <a href="online-admission.html" class="px-4 py-3 bg-primary text-white font-bold text-sm text-center rounded-xl hover:bg-primary-light hover:shadow-lg transition-all shadow-md">Apply Now</a>
                 </div>
               </div>

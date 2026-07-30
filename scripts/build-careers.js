@@ -28,7 +28,7 @@ const jobs = [
 
 const careersContent = `
     <!-- Cinematic Hero Section -->
-    <section class="relative h-[650px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[300px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
              alt="Team Collaboration" 
@@ -47,46 +47,15 @@ const careersContent = `
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-2xl">
           Build Your Career With <span class="text-accent">InstituteHub</span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 font-light leading-relaxed">
-          Become a part of our growing team and help shape the future of computer education. We are looking for passionate educators, developers, IT professionals, and support staff dedicated to empowering students through quality learning.
-        </p>
 
         <div class="flex items-center justify-center gap-2 text-sm font-medium text-gray-400 mb-12">
           <a href="index.html" class="hover:text-white transition-colors">Home</a>
           <span>/</span>
           <span class="text-accent">Careers</span>
         </div>
-        
-        <div class="animate-bounce inline-block text-white/50">
-          <i class="ri-arrow-down-line text-2xl"></i>
-        </div>
       </div>
     </section>
 
-    <!-- Career Statistics -->
-    <section class="py-12 bg-[#081C3A] relative z-30 border-b border-white/10">
-      <div class="container mx-auto px-6 lg:px-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div class="text-4xl font-bold text-accent mb-2">10+</div>
-            <div class="text-sm font-bold text-gray-300 uppercase tracking-wider">Open Positions</div>
-          </div>
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div class="text-4xl font-bold text-accent mb-2">150+</div>
-            <div class="text-sm font-bold text-gray-300 uppercase tracking-wider">Team Members</div>
-          </div>
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div class="text-4xl font-bold text-accent mb-2">20K+</div>
-            <div class="text-sm font-bold text-gray-300 uppercase tracking-wider">Students Trained</div>
-          </div>
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div class="text-4xl font-bold text-accent mb-2">25+</div>
-            <div class="text-sm font-bold text-gray-300 uppercase tracking-wider">Years Excellence</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Search Section (Sticky) -->
     <div class="sticky top-[72px] z-40 py-6 animate-fade-up">
@@ -121,34 +90,6 @@ const careersContent = `
       </div>
     </div>
 
-    <!-- Why Join InstituteHub -->
-    <section class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Join <span class="text-primary">InstituteHub?</span></h2>
-          <p class="text-gray-600 text-lg">We offer a dynamic, supportive, and growth-oriented environment where your contributions make a real impact.</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          ${[
-            {i: "ri-line-chart-line", t: "Career Growth", d: "Continuous learning, promotions, and leadership opportunities."},
-            {i: "ri-group-line", t: "Friendly Work Culture", d: "Supportive team environment with collaborative learning."},
-            {i: "ri-macbook-line", t: "Skill Development", d: "Regular workshops, certifications, and technical training."},
-            {i: "ri-building-4-line", t: "Modern Infrastructure", d: "Well-equipped computer labs and digital classrooms."},
-            {i: "ri-home-wifi-line", t: "Flexible Work", d: "Hybrid and remote opportunities for selected roles."},
-            {i: "ri-medal-line", t: "Recognition & Rewards", d: "Performance-based appreciation and employee recognition."}
-          ].map((f, index) => 
-            '<div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-300 group animate-fade-up" style="animation-delay: ' + (index*0.1) + 's;">' +
-              '<div class="w-16 h-16 rounded-2xl bg-blue-50 text-primary flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">' +
-                '<i class="' + f.i + '"></i>' +
-              '</div>' +
-              '<h3 class="text-xl font-bold text-gray-900 mb-3">' + f.t + '</h3>' +
-              '<p class="text-gray-600">' + f.d + '</p>' +
-            '</div>'
-          ).join('')}
-        </div>
-      </div>
-    </section>
 
     <!-- Open Positions -->
     <section class="py-24 bg-white relative">
@@ -184,9 +125,9 @@ const careersContent = `
                   job.skill.split(', ').map(s => '<span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">' + s + '</span>').join('') +
                 '</div>' +
               '</div>' +
-              '<div class="flex gap-4 mt-auto pt-6 border-t border-gray-100">' +
-                '<button class="flex-1 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-light transition-colors shadow-md">Apply Now</button>' +
-                '<button class="flex-1 py-3 bg-gray-50 text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-colors border border-gray-200">View Role</button>' +
+              '<div class="flex flex-col xl:flex-row gap-3 mt-auto pt-6 border-t border-gray-100">' +
+                '<button class="w-full xl:flex-1 py-3 bg-[#0B1F3A] text-white font-bold rounded-xl hover:bg-[#1E293B] hover:-translate-y-1 hover:shadow-lg active:scale-95 transition-all duration-300">Apply Now</button>' +
+                '<button class="w-full xl:flex-1 py-3 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-50 hover:-translate-y-1 hover:shadow-lg active:scale-95 transition-all duration-300 border border-gray-200">View Role</button>' +
               '</div>' +
             '</div>'
           ).join('')}
@@ -198,87 +139,6 @@ const careersContent = `
       </div>
     </section>
 
-    <!-- Recruitment Process -->
-    <section class="py-24 bg-[#081C3A] text-white overflow-hidden">
-      <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
-        <div class="text-center mb-16 animate-fade-up">
-          <h2 class="text-4xl font-bold mb-4">Our Hiring <span class="text-accent">Process</span></h2>
-          <p class="text-gray-400 text-lg">A simple and transparent process to get you onboard.</p>
-        </div>
-        
-        <div class="relative animate-fade-up" style="animation-delay: 0.2s;">
-          <!-- Line -->
-          <div class="absolute top-1/2 left-0 w-full h-1 bg-white/10 -translate-y-1/2 hidden md:block"></div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-6 gap-6 relative z-10">
-            ${[
-              {n: "1", t: "Apply Online", i: "ri-file-text-line"},
-              {n: "2", t: "Review", i: "ri-search-eye-line"},
-              {n: "3", t: "Interview", i: "ri-user-voice-line"},
-              {n: "4", t: "Assessment", i: "ri-code-box-line"},
-              {n: "5", t: "Offer Letter", i: "ri-mail-send-line"},
-              {n: "6", t: "Welcome", i: "ri-shake-hands-line"}
-            ].map(s => 
-              '<div class="flex flex-col items-center text-center group">' +
-                '<div class="w-16 h-16 rounded-full bg-[#081C3A] border-4 border-white/20 flex items-center justify-center text-2xl text-gray-400 group-hover:border-accent group-hover:text-accent group-hover:scale-110 transition-all duration-300 shadow-xl mb-4 relative">' +
-                  '<i class="' + s.i + '"></i>' +
-                  '<div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent text-[#081C3A] text-xs font-bold flex items-center justify-center shadow-lg">' + s.n + '</div>' +
-                '</div>' +
-                '<h4 class="font-bold text-sm text-gray-200 group-hover:text-white transition-colors">' + s.t + '</h4>' +
-              '</div>'
-            ).join('')}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Life at InstituteHub (Masonry) -->
-    <section class="py-24 bg-white">
-      <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Life at <span class="text-primary">InstituteHub</span></h2>
-          <p class="text-gray-600 text-lg">Experience a vibrant workplace culture filled with learning, collaboration, and celebrations.</p>
-        </div>
-
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          ${[
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80",
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80",
-            "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80",
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80",
-            "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80",
-            "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80"
-          ].map(img => 
-            '<div class="break-inside-avoid rounded-2xl overflow-hidden group relative cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 animate-fade-up">' +
-              '<img src="' + img + '&w=600&auto=format&fit=crop" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">' +
-              '<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">' +
-                '<i class="ri-instagram-line text-4xl text-white"></i>' +
-              '</div>' +
-            '</div>'
-          ).join('')}
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6 lg:px-12 max-w-3xl">
-        <div class="text-center mb-12 animate-fade-up">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        </div>
-        <div class="space-y-4">
-          ${[
-            "How do I apply?", "Can freshers apply?", "Are internships available?", "Is remote work available?", "What documents are required?", "How long does the hiring process take?"
-          ].map(q => 
-            '<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm animate-fade-up">' +
-              '<button class="w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center hover:text-primary transition-colors focus:outline-none">' +
-                q + ' <i class="ri-add-line text-xl"></i>' +
-              '</button>' +
-            '</div>'
-          ).join('')}
-        </div>
-      </div>
-    </section>
 
     <!-- Final CTA -->
     <section class="py-24 relative overflow-hidden">
